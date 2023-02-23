@@ -1,6 +1,8 @@
 # Community Guide for theta-client
 
-For full code on  [GitHub ricohapi/theta-client](https://github.com/ricohapi/theta-client).
+![tablet](images/tablet.png)
+
+Full code on  [GitHub ricohapi/theta-client](https://github.com/ricohapi/theta-client).
 
 ## Quickstart
 

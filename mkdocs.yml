@@ -1,1 +1,13 @@
 site_name: theta-client guide
+site_description: RICOH THETA Web API and mobile development
+extra:
+  analytics: 
+    provider: google
+    property: G-M64WFDW435
+theme:
+  name: material
+  palette:
+    primary: 'light green'
+    accent: 'lime'
+  logo: images/icon/green-logo-192x192.png
+  favicon: images/icon/favicon-16x16.png
