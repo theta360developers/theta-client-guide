@@ -62,6 +62,22 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#demo-apps" class="nav-link">Demo Apps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#documentation" class="nav-link">Documentation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#community-tips" class="nav-link">Community Tips</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#getting-help" class="nav-link">Getting Help</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -87,13 +103,42 @@
 </ol>
 <h2 id="overview">Overview</h2>
 <p><code>theta-client</code> is an open source library enabling rapid creation of mobile apps that control RICOH THETA cameras. The library works with Kotlin, Swift, Dart, and JavaScript.</p>
+<h2 id="demo-apps">Demo Apps</h2>
 <p>Four open source demo applications are included:</p>
 <ul>
 <li><a href="https://github.com/ricohapi/theta-client/tree/main/demos/demo-android">Android native with Kotlin</a></li>
 <li><a href="https://github.com/ricohapi/theta-client/tree/main/demos/demo-ios">iOS native with Swift</a></li>
 <li><a href="https://github.com/ricohapi/theta-client/tree/main/demos/demo-react-native">React Native for iOS and Android builds</a></li>
 <li><a href="https://github.com/ricohapi/theta-client/tree/main/demos/demo-flutter">Flutter for iOS and Android builds</a></li>
-</ul></div>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<p>Refer to theta-client documentation for the development platform you are using.</p>
+<ul>
+<li><a href="https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-android.md">Android</a></li>
+<li><a href="https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-ios.md">iOS</a></li>
+<li><a href="https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-react-native.md">React Native</a></li>
+<li><a href="https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-flutter.md">Flutter</a></li>
+</ul>
+<p>In addition to documentation on theta-client, you can refer to the
+RICOH official <a href="https://github.com/ricohapi/theta-api-specs/tree/main/theta-web-api-v2.1">Web API 2.1 documentation</a>.</p>
+<h2 id="community-tips">Community Tips</h2>
+<h3 id="cannot-find-android_home-android">cannot find ANDROID_HOME (Android)</h3>
+<p>You may need to specify the path of ANDROID_HOME in either an
+environmental variable or the <code>local.properties</code> file in the
+project root.</p>
+<p>Example <code>local.properties</code> on Linux.</p>
+<p><code>sdk.dir=/home/craig/Android/Sdk</code></p>
+<h3 id="zip-end-header-not-found-android">zip END header not found (Android)</h3>
+<p>After you build theta-client, make sure that you copied
+<code>theta-client-debug.aar</code> into <code>theta-client\demos\demo-android\app\libs</code></p>
+<h3 id="react-native-run-pod-install-in-ios-folder">React Native: run pod install in ios folder</h3>
+<p>For React Native, you may need to run <code>pod install</code> in the ios 
+folder inside of demo-react-native</p>
+<h3 id="change-equirectangular-image-to-360-navigation-view-flutter">Change Equirectangular Image to 360 Navigation View (Flutter)</h3>
+<p>Oppkey uses <a href="https://pub.dev/packages/panorama">panorama</a>.</p>
+<p><a href="https://youtu.be/9hWUU6G3Ank">video tutorial</a></p>
+<h2 id="getting-help">Getting Help</h2>
+<p>Open an <a href="https://github.com/ricohapi/theta-client/issues">issue on GitHub</a>. </p></div>
             </div>
         </div>
 
@@ -174,5 +219,5 @@
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2023-02-23 02:01:36.099069+00:00
+Build Date UTC : 2023-02-23 17:24:43.334398+00:00
 -->
