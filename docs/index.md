@@ -220,6 +220,25 @@ After pressing take picture, the live preview will appear.
 
 ![live preview](images/windows_flutter/live_preview.png)
 
+### minSdkVersion (Android)
+
+If you build a new project, the `minSdkVersion` might be set
+to a lower number such as 16.  The plug-in requires a `minSdkVersion` of 26.
+
+In `android/app/build.gradle`, set to `minSdkVersion 26`
+
+### Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
+
+In `flutter_project_root/android/app/build.gradle`, specify `theta-client-debug.aar` in the dependencies.
+
+```
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')
+
+}
+```
+
 
 
 
