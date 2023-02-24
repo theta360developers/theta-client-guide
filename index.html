@@ -295,6 +295,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#minsdkversion-android" class="md-nav__link">
+    minSdkVersion (Android)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-resolution-of-lcomricoh360thetaclientthetarepository-flutter-android" class="md-nav__link">
+    Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -408,6 +422,20 @@
           <li class="md-nav__item">
   <a href="#build-flutter-on-windows-for-android" class="md-nav__link">
     Build Flutter on Windows for Android
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minsdkversion-android" class="md-nav__link">
+    minSdkVersion (Android)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failed-resolution-of-lcomricoh360thetaclientthetarepository-flutter-android" class="md-nav__link">
+    Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
   </a>
   
 </li>
@@ -594,6 +622,18 @@ camera, you will see <em>Initialize error</em>.  </p>
 <p><img alt="flutter example connection" src="images/windows_flutter/flutter_example.png" /></p>
 <p>After pressing take picture, the live preview will appear.</p>
 <p><img alt="live preview" src="images/windows_flutter/live_preview.png" /></p>
+<h3 id="minsdkversion-android">minSdkVersion (Android)</h3>
+<p>If you build a new project, the <code>minSdkVersion</code> might be set
+to a lower number such as 16.  The plug-in requires a <code>minSdkVersion</code> of 26.</p>
+<p>In <code>android/app/build.gradle</code>, set to <code>minSdkVersion 26</code></p>
+<h3 id="failed-resolution-of-lcomricoh360thetaclientthetarepository-flutter-android">Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)</h3>
+<p>In <code>flutter_project_root/android/app/build.gradle</code>, specify <code>theta-client-debug.aar</code> in the dependencies.</p>
+<pre><code>dependencies {
+    implementation &quot;org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version&quot;
+    implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')
+
+}
+</code></pre>
 <h2 id="getting-help">Getting Help</h2>
 <p>Open an <a href="https://github.com/ricohapi/theta-client/issues">issue on GitHub</a>. </p>
 
