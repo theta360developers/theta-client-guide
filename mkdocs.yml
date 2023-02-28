@@ -11,3 +11,6 @@ theme:
     accent: 'lime'
   logo: images/icon/green-logo-192x192.png
   favicon: images/icon/favicon-16x16.png
+nav:
+    - Home: 'index.md'
+    - React Native Install: 'react-native-install.md'
