@@ -14,6 +14,20 @@ Python 3.10.6
 ```
 pip install mkdocs
 pip install mkdocs-material
+pip install pillow cairosvg
 ```
 
-refer to [mkdocs.yml](https://github.com/theta360developers/theta-client-guide/blob/main/mkdocs.yml) for theme.
+## references
+
+* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
+
+## troubleshooting
+
+pip not found
+
+```
+which pip
+/home/craig/.local/bin/pip
+```
+
+set PATH or run `python -m pip`
