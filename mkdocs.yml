@@ -1,6 +1,6 @@
 site_name: theta-client guide
 site_description: RICOH THETA Web API and mobile development
-site_url: https://github.com/theta360developers/theta-client-guide
+site_url: https://theta360developers.github.io/theta-client-guide/
 nav:
    - Home: index.md
    - Flutter: flutter.md
