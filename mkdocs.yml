@@ -2,8 +2,10 @@ site_name: theta-client guide
 site_description: RICOH THETA Web API and mobile development
 site_url: https://theta360developers.github.io/theta-client-guide/
 nav:
-   - Home: index.md
-   - Flutter: flutter.md
+  - Home: index.md
+  - Flutter: flutter.md
+  - React Native: 'react-native-install.md'
+
 extra:
   analytics: 
     provider: google
