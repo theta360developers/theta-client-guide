@@ -477,7 +477,7 @@ new Flutter project</li>
 <p>Oppkey uses <a href="https://pub.dev/packages/panorama">panorama</a>.</p>
 <p><a href="https://youtu.be/9hWUU6G3Ank">video tutorial</a></p>
 <p>After taking a picture, the post-view is also in equirectangular.</p>
-<p><img alt="post view" src="../images/windows_flutter/postview.png" /></p>
+<p><img alt="post view" src="../images/flutter/windows/postview.png" /></p>
 <p>Add Panorama package.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>PS C:theta-client\demos\demo-flutter&gt; flutter pub add panorama
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Resolving dependencies...
@@ -497,18 +497,18 @@ new Flutter project</li>
 </span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="nt">panorama</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">^0.4.1</span>
 </span></code></pre></div>
 <p>In <code>lib/photo_screen.dart</code>, go to line 19 and wrap with Panorama.</p>
-<p><img alt="wrap with widget lightbulb" src="../images/windows_flutter/lightbulb.png" /></p>
-<p><img alt="wrap with widget" src="../images/windows_flutter/wrap_with_widget.png" /></p>
+<p><img alt="wrap with widget lightbulb" src="../images/flutter/windows/lightbulb.png" /></p>
+<p><img alt="wrap with widget" src="../images/flutter/windows/wrap_with_widget.png" /></p>
 <p>If you don't have auto-import, the <code>Panorama</code> widget will initially
 be red.</p>
-<p><img alt="panorama red" src="../images/windows_flutter/panorama_red.png" /></p>
+<p><img alt="panorama red" src="../images/flutter/windows/panorama_red.png" /></p>
 <p>On VS Code, use ctrl-. to open up the auto-import menu.  </p>
-<p><img alt="panorama import" src="../images/windows_flutter/panorama_import.png" /></p>
+<p><img alt="panorama import" src="../images/flutter/windows/panorama_import.png" /></p>
 <p>Hot restart</p>
 <p>Select a file from list view.</p>
-<p><img alt="list files" src="../images/windows_flutter/list_files.png" /></p>
+<p><img alt="list files" src="../images/flutter/windows/list_files.png" /></p>
 <p>View in 360.</p>
-<p><img alt="360 view" src="../images/windows_flutter/360_view.png" /></p>
+<p><img alt="360 view" src="../images/flutter/windows/360_view.png" /></p>
 <h2 id="build-flutter-on-windows-for-android">Build Flutter on Windows for Android</h2>
 <p>After building <code>theta-client</code>, inspect <code>theta-client/scripts/build-flutter-build.sh</code></p>
 <p>The key part is:</p>
@@ -529,9 +529,9 @@ be red.</p>
 </span></code></pre></div>
 <p>In <code>demo-flutter\packages</code>, delete the file <code>theta_client_flutter</code> and replace
 with a new folder called <code>theta_client_flutter</code></p>
-<p><img alt="theta_client_flutter file" src="../images/windows_flutter/theta_client_flutter_file.png" /></p>
+<p><img alt="theta_client_flutter file" src="../images/flutter/windows/theta_client_flutter_file.png" /></p>
 <p>Copy the contents <code>.\flutter</code> into the new <code>theta_client_flutter</code> folder.</p>
-<p><img alt="theta_client_flutter package" src="../images/windows_flutter/theta_client_flutter_package.png" /></p>
+<p><img alt="theta_client_flutter package" src="../images/flutter/windows/theta_client_flutter_package.png" /></p>
 <p>In <code>demo-flutter</code>, run <code>flutter pub get</code></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>PS C:theta-client\demos\demo-flutter&gt; flutter pub get
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Running &quot;flutter pub get&quot; in demo-flutter...
@@ -573,12 +573,12 @@ with a new folder called <code>theta_client_flutter</code></p>
 </span></code></pre></div>
 <p>Unless your computer is already connected to a RICOH THETA
 camera, you will see <em>Initialize error</em>.  </p>
-<p><img alt="initialize error" src="../images/windows_flutter/initialize_error.png" /></p>
+<p><img alt="initialize error" src="../images/flutter/windows/initialize_error.png" /></p>
 <p>Connect Windows computer to camera.</p>
-<p><img alt="connect" src="../images/windows_flutter/connect.png" /></p>
-<p><img alt="flutter example connection" src="../images/windows_flutter/flutter_example.png" /></p>
+<p><img alt="connect" src="../images/flutter/windows/connect.png" /></p>
+<p><img alt="flutter example connection" src="../images/flutter/windows/flutter_example.png" /></p>
 <p>After pressing take picture, the live preview will appear.</p>
-<p><img alt="live preview" src="../images/windows_flutter/live_preview.png" /></p>
+<p><img alt="live preview" src="../images/flutter/windows/live_preview.png" /></p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <h3 id="failed-resolution-of-lcomricoh360thetaclientthetarepository-flutter-android">Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)</h3>
 <p>In <code>flutter_project_root/android/app/build.gradle</code>, specify <code>theta-client-debug.aar</code> in the dependencies.</p>
