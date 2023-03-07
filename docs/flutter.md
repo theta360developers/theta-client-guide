@@ -55,7 +55,7 @@ Oppkey uses [panorama](https://pub.dev/packages/panorama).
 
 After taking a picture, the post-view is also in equirectangular.
 
-![post view](images/windows_flutter/postview.png)
+![post view](images/flutter/windows/postview.png)
 
 Add Panorama package.
 
@@ -84,28 +84,28 @@ dependencies:
 
 In `lib/photo_screen.dart`, go to line 19 and wrap with Panorama.
 
-![wrap with widget lightbulb](images/windows_flutter/lightbulb.png)
+![wrap with widget lightbulb](images/flutter/windows/lightbulb.png)
 
-![wrap with widget](images/windows_flutter/wrap_with_widget.png)
+![wrap with widget](images/flutter/windows/wrap_with_widget.png)
 
 If you don't have auto-import, the `Panorama` widget will initially
 be red.
 
-![panorama red](images/windows_flutter/panorama_red.png)
+![panorama red](images/flutter/windows/panorama_red.png)
 
 On VS Code, use ctrl-. to open up the auto-import menu.  
 
-![panorama import](images/windows_flutter/panorama_import.png)
+![panorama import](images/flutter/windows/panorama_import.png)
 
 Hot restart
 
 Select a file from list view.
 
-![list files](images/windows_flutter/list_files.png)
+![list files](images/flutter/windows/list_files.png)
 
 View in 360.
 
-![360 view](images/windows_flutter/360_view.png)
+![360 view](images/flutter/windows/360_view.png)
 
 ## Build Flutter on Windows for Android
 
@@ -135,11 +135,11 @@ Mode                 LastWriteTime         Length Name
 In `demo-flutter\packages`, delete the file `theta_client_flutter` and replace
 with a new folder called `theta_client_flutter`
 
-![theta_client_flutter file](images/windows_flutter/theta_client_flutter_file.png)
+![theta_client_flutter file](images/flutter/windows/theta_client_flutter_file.png)
 
 Copy the contents `.\flutter` into the new `theta_client_flutter` folder.
 
-![theta_client_flutter package](images/windows_flutter/theta_client_flutter_package.png)
+![theta_client_flutter package](images/flutter/windows/theta_client_flutter_package.png)
 
 In `demo-flutter`, run `flutter pub get`
 
@@ -190,17 +190,17 @@ Syncing files to device sdk gphone64 x86 64...                     172ms
 Unless your computer is already connected to a RICOH THETA
 camera, you will see _Initialize error_.  
 
-![initialize error](images/windows_flutter/initialize_error.png)
+![initialize error](images/flutter/windows/initialize_error.png)
 
 Connect Windows computer to camera.
 
-![connect](images/windows_flutter/connect.png)
+![connect](images/flutter/windows/connect.png)
 
-![flutter example connection](images/windows_flutter/flutter_example.png)
+![flutter example connection](images/flutter/windows/flutter_example.png)
 
 After pressing take picture, the live preview will appear.
 
-![live preview](images/windows_flutter/live_preview.png)
+![live preview](images/flutter/windows/live_preview.png)
 
 
 ## Troubleshooting
