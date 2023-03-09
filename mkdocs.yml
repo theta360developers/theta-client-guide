@@ -5,6 +5,7 @@ nav:
   - Home: index.md
   - Flutter: flutter.md
   - React Native: 'react-native-install.md'
+  - Camera Comparison: 'camera_compare.md'
 
 extra:
   analytics: 
