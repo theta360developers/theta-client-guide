@@ -52,3 +52,18 @@ navigation.
 ![2x zoom 1](images/camera_compare/2x_zoom_1.jpeg)
 <figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
 </figure>
+
+<figure markdown>
+![2x zoom steering wheel](images/camera_compare/2x_zoom_steering_wheel.jpeg)
+<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+</figure>
+
+<figure markdown>
+![2x zoom door](images/camera_compare/2x_zoom_door.jpeg)
+<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+</figure>
+
+<figure markdown>
+![2x zoom glove box](images/camera_compare/2x_zoom_glove_box.jpeg)
+<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+</figure>
