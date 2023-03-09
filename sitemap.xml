@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://theta360developers.github.io/theta-client-guide/compression/</loc>
+         <lastmod>2023-03-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://theta360developers.github.io/theta-client-guide/flutter/</loc>
          <lastmod>2023-03-09</lastmod>
          <changefreq>daily</changefreq>
