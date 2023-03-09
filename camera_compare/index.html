@@ -10,14 +10,14 @@
       
       
       
-        <link rel="canonical" href="https://theta360developers.github.io/theta-client-guide/react-native-install/">
+        <link rel="canonical" href="https://theta360developers.github.io/theta-client-guide/camera_compare/">
       
       <link rel="icon" href="../images/icon/favicon-16x16.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>React Native - theta-client guide</title>
+        <title>Camera Comparison - theta-client guide</title>
       
     
     
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#react-native-ricoh-theta-demo-installation-guide-for-windows" class="md-skip">
+        <a href="#model-comparison" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              React Native
+              Camera Comparison
             
           </span>
         </div>
@@ -222,6 +222,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../react-native-install/" class="md-nav__link">
+        React Native
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -234,12 +249,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          React Native
+          Camera Comparison
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        React Native
+        Camera Comparison
       </a>
       
         
@@ -258,57 +273,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-steps-to-run-react-native-demo-on-windows" class="md-nav__link">
-    General Steps to run React Native Demo on Windows
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-environment" class="md-nav__link">
-    Work Environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-react-native-toolchain" class="md-nav__link">
-    Install react native toolchain
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-and-build-theta-client" class="md-nav__link">
-    Install and build theta-client
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-and-build-demo-react-native" class="md-nav__link">
-    Install and build demo-react-native
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-results-on-theta-x" class="md-nav__link">
-    Test Results on THETA X
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-and-next-steps" class="md-nav__link">
-    Summary and Next Steps
+  <a href="#original-images-used-in-test" class="md-nav__link">
+    Original Images Used in Test
   </a>
   
 </li>
@@ -317,21 +283,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../camera_compare/" class="md-nav__link">
-        Camera Comparison
-      </a>
     </li>
   
 
@@ -363,57 +314,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#general-steps-to-run-react-native-demo-on-windows" class="md-nav__link">
-    General Steps to run React Native Demo on Windows
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#work-environment" class="md-nav__link">
-    Work Environment
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-react-native-toolchain" class="md-nav__link">
-    Install react native toolchain
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-and-build-theta-client" class="md-nav__link">
-    Install and build theta-client
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-and-build-demo-react-native" class="md-nav__link">
-    Install and build demo-react-native
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#test-results-on-theta-x" class="md-nav__link">
-    Test Results on THETA X
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary-and-next-steps" class="md-nav__link">
-    Summary and Next Steps
+  <a href="#original-images-used-in-test" class="md-nav__link">
+    Original Images Used in Test
   </a>
   
 </li>
@@ -432,63 +334,17 @@
                 
 
 
-<h1 id="react-native-ricoh-theta-demo-installation-guide-for-windows">React Native RICOH THETA Demo Installation Guide for Windows</h1>
-<p><img alt="react-windows-header" src="../images/react_native/windows/reactwindows.svg" /></p>
-<h2 id="overview">Overview</h2>
-<p>Guide covers the installation process of React Native on <strong>Windows OS</strong> so that we can run the <code>demo-react-native</code>. 
-Another section will cover the installation for Mac OS. For this installation you will need to install <strong>node.js</strong> if you haven't already. 
-Their will be videos and links in the resource section for the installation of node.js on your computer. Article also covers how to build the <code>theta-client</code> and make it available to <code>demo-react-native</code>. 
-As well as building the <code>demo-react-native</code> and running it on an android emulator. 
-My results will be shown in the article with the <strong>THETA X</strong> running the react native demo app provided by the RICOH API.</p>
-<h2 id="general-steps-to-run-react-native-demo-on-windows">General Steps to run React Native Demo on Windows</h2>
-<ol>
-<li>Build the <code>theta-client</code> and make it available to <code>demo-react-native</code></li>
-<li>Build <code>demo-react-native</code></li>
-<li>Test the <code>demo-react-native</code> build on <strong>THETA X</strong> with an emulator
-    <img alt="placeholder" src="http://via.placeholder.com/600x300" /></li>
-<li>Test all demo features : List Files, Take Photo</li>
-</ol>
-<p>Resources</p>
+<h1 id="model-comparison">Model Comparison</h1>
+<p>The THETA X can shoot an 11K image compared to the 5.4K image of the SC2.</p>
+<p>To take advantage of the higher-resolution images of the THETA X,
+developers may wish to optimize the viewer and enable zoom for
+high-detail areas such as the climate control and media center.</p>
+<p><img alt="5x zoom" src="../images/camera_compare/5x_zoom.jpeg" /></p>
+<h2 id="original-images-used-in-test">Original Images Used in Test</h2>
 <ul>
-<li>
-<p><a href="https://github.com/ricohapi/theta-client/tree/main/demos/demo-react-native">GITHUB React Native demo for theta-client</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=SqzDomDikcM">VIDEO theta-client React Native full build tutorial and demonstration</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=NWUfaXFPv50">VIDEO HowTo Install nvm, node, npm and yarn on Windows 11</a></p>
-</li>
+<li><a href="https://drive.google.com/file/d/18sau30LQEdRpib4LrJSD4Eh9OMNJ00n7/view?usp=sharing">RICOH THETA X</a> 11K, auto-HDR</li>
+<li><a href="https://drive.google.com/file/d/14iCkb7XDoSiBml1ZDc-2q08dfvthTCUo/view?usp=sharing">RICOH THETA SC2</a> 5.4K, auto-HDR</li>
 </ul>
-<h2 id="work-environment">Work Environment</h2>
-<table>
-<thead>
-<tr>
-<th>Dell XPS 13</th>
-<th>Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CPU</td>
-<td>Intel(R) Core(TM) i7-10710U CPU @ 1.10GHz   1.61 GHz</td>
-</tr>
-<tr>
-<td>RAM</td>
-<td>16.0 GB</td>
-</tr>
-<tr>
-<td>OS</td>
-<td>Windows 11 Home</td>
-</tr>
-</tbody>
-</table>
-<h2 id="install-react-native-toolchain">Install react native toolchain</h2>
-<h2 id="install-and-build-theta-client">Install and build theta-client</h2>
-<h2 id="install-and-build-demo-react-native">Install and build demo-react-native</h2>
-<h2 id="test-results-on-theta-x">Test Results on THETA X</h2>
-<p><img alt="result-1-screenshot" src="../images/react_native/windows/test-screenshot1.bmp" /></p>
-<h2 id="summary-and-next-steps">Summary and Next Steps</h2>
 
               
             </article>
@@ -502,7 +358,7 @@ My results will be shown in the article with the <strong>THETA X</strong> runnin
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../flutter/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Flutter" rel="prev">
+        <a href="../react-native-install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: React Native" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -511,26 +367,11 @@ My results will be shown in the article with the <strong>THETA X</strong> runnin
               <span class="md-footer__direction">
                 Previous
               </span>
-              Flutter
+              React Native
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../camera_compare/" class="md-footer__link md-footer__link--next" aria-label="Next: Camera Comparison" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Camera Comparison
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
       
     </nav>
   
