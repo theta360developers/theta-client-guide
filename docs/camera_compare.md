@@ -10,9 +10,13 @@ high-detail areas such as the climate control and media center.
 ![5x zoom](images/camera_compare/5x_zoom.jpeg)
 <figcaption>5x zoom: THETA X (left) and THETA SC2 (right)
 <<<<<<< HEAD
+<<<<<<< HEAD
 </figcaption>
 =======
 >>>>>>> 4dba4ed (expanded camera comparison)
+=======
+</figcaption>
+>>>>>>> d6f9aad (demo of app)
 </figure>
 
 ## Original Images Used in Test
@@ -35,9 +39,13 @@ THETA X (left image).
 ![4x zoom](images/camera_compare/4x_zoom.jpeg)
 <figcaption>4x zoom: THETA X (left) and THETA SC2 (right)
 <<<<<<< HEAD
+<<<<<<< HEAD
 </figcaption>
 =======
 >>>>>>> 4dba4ed (expanded camera comparison)
+=======
+</figcaption>
+>>>>>>> d6f9aad (demo of app)
 </figure>
 
 ## 3x zoom
@@ -50,9 +58,13 @@ of the THETA X.
 ![3x zoom](images/camera_compare/3x_zoom.jpeg)
 <figcaption>3x zoom: THETA X (left) and THETA SC2 (right)
 <<<<<<< HEAD
+<<<<<<< HEAD
 </figcaption>
 =======
 >>>>>>> 4dba4ed (expanded camera comparison)
+=======
+</figcaption>
+>>>>>>> d6f9aad (demo of app)
 </figure>
 
 ## 2x zoom
@@ -63,6 +75,7 @@ navigation.
 <figure markdown>
 ![2x zoom 1](images/camera_compare/2x_zoom_1.jpeg)
 <figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+<<<<<<< HEAD
 <<<<<<< HEAD
 </figcaption>
 </figure>
@@ -85,19 +98,25 @@ navigation.
 </figcaption>
 =======
 >>>>>>> 4dba4ed (expanded camera comparison)
+=======
+</figcaption>
+>>>>>>> d6f9aad (demo of app)
 </figure>
 
 <figure markdown>
 ![2x zoom steering wheel](images/camera_compare/2x_zoom_steering_wheel.jpeg)
 <figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+</figcaption>
 </figure>
 
 <figure markdown>
 ![2x zoom door](images/camera_compare/2x_zoom_door.jpeg)
 <figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+</figcaption>
 </figure>
 
 <figure markdown>
 ![2x zoom glove box](images/camera_compare/2x_zoom_glove_box.jpeg)
 <figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
+</figcaption>
 </figure>

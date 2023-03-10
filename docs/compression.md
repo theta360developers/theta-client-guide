@@ -177,6 +177,11 @@ Light Value                     : 6.5
 
 <figure markdown>
 ![THETA X 11K,
+<<<<<<< HEAD
 1.4MB file size](https://www.dropbox.com/s/bch53ybtvggkg4r/theta_x_30.gif?raw=1){ loading=lazy }
+=======
+1.4MB file size](https://www.dropbox.com/s/bch53ybtvggkg4r/theta_x_30.gif?raw=1)
+{ loading=lazy }
+>>>>>>> d6f9aad (demo of app)
 <figcaption>lossy compression: THETA X 1.4MB file size</figcaption>
 </figure>
