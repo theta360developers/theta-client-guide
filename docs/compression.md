@@ -20,7 +20,7 @@ RICOH THETA X 11K image, auto-HDR
 <figure markdown>
 ![THETA X 11K, 2MB file size](images/compression/11k_2mb_50quality.png)
 <figcaption>lossy compression: THETA X 2MB file size (left) and
-THETA SC2 5.4K, 4.2MB file size(right)
+THETA SC2 5.4K, 4.2MB file size(right)</figcaption>
 </figure>
 
 ## 1.4MB 11K THETA X Image vs 4.2MB 5.4K SC2 Image
@@ -29,6 +29,7 @@ THETA SC2 5.4K, 4.2MB file size(right)
 ![THETA X 11K, 1.4MB file size](images/compression/11k_1_4mb_30quality.png)
 <figcaption>lossy compression: THETA X 1.4MB file size (left) and
 THETA SC2 5.4K, 4.2MB file size(right)
+</figcaption>
 </figure>
 
 ## 3x zoom: 1.4MB 11K THETA X Image vs 4.2MB 5.4K SC2 Image
@@ -37,12 +38,14 @@ THETA SC2 5.4K, 4.2MB file size(right)
 ![THETA X 11K, 1.4MB file size](images/compression/11k_30quality_knobs.png)
 <figcaption>lossy compression: THETA X 1.4MB file size (left) and
 THETA SC2 5.4K, 4.2MB file size(right)
+</figcaption>
 </figure>
 
 <figure markdown>
 ![THETA X 11K, 1.4MB file size](images/compression/11k_30quality_glove_box.png)
 <figcaption>lossy compression: THETA X 1.4MB file size (left) and
 THETA SC2 5.4K, 4.2MB file size(right)
+</figcaption>
 </figure>
 
 ## metadata
@@ -169,3 +172,12 @@ Focal Length                    : 1.4 mm
 GPS Position                    : 35 deg 35' 52.20" N, 139 deg 42' 22.15" E
 Light Value                     : 6.5
 ```
+
+## Demo of 1.4MB THETA X 11K Image
+
+<figure markdown>
+![THETA X 11K,
+1.4MB file size](https://www.dropbox.com/s/bch53ybtvggkg4r/theta_x_30.gif?raw=1)
+{ loading=lazy }
+<figcaption>lossy compression: THETA X 1.4MB file size</figcaption>
+</figure>
