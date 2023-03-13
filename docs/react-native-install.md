@@ -47,33 +47,33 @@ First Command - Clone the Repo with `git clone https://github.com/ricohapi/theta
 ![firstCommand](images/react_native/gitCloneThetaClient.png)
 
 Second Command -  Go into  **theta-client** directory with `cd theta-client`
-![secondCommand](images/cdThetaClient1.png)
+![secondCommand](images/react_native/cdThetaClient1.png)
 
 Third Command - Build Gradlew with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, the problem is the SDK location is not found. My solution is to set the environment variable of the SDK.
-![thirdCommand](images/gradleWPublishFail.png)
+![thirdCommand](images/react_native/gradleWPublishFail.png)
 
 ## Steps to Fix for Build Failure:
 
 1.  Search for env
 
-    ![envVarScrenshot](images/envVar.png)
+    ![envVarScrenshot](images/react_native/envVar.png)
 
 2.  Click on environmental variables
 
-    ![pressOnEnv](images/envVarPress.png)
+    ![pressOnEnv](images/react_native/envVarPress.png)
 
 3.  New System Variable
 
-    ![newEnvVar](images/newEnvVar.png)
+    ![newEnvVar](images/react_native/newEnvVar.png)
 
 4.  Type in the Variable name `ANDROID_HOME` and set the path `C:\Users\UserName\AppData\Local\Android\Sdk`
 
-    ![settingPathScreenshot](images/settingEnvVar.png)
+    ![settingPathScreenshot](images/react_native/settingEnvVar.png)
 
 
 By default the path to the SDK usually is `C:\Users\UserName\AppData\Local\Android\Sdk` , Copy the Path substituting for your `UserName` 
 
-![pathscreenshot](images/pathScreenshot.png)
+![pathscreenshot](images/react_native/pathScreenshot.png)
 
 
 5.  Restart your terminal by closing and relaunching it before trying out the `gradlew` build command again
@@ -83,13 +83,13 @@ By default the path to the SDK usually is `C:\Users\UserName\AppData\Local\Andro
 
 Fourth Command - Try the Build Gradlew command again `./gradlew publishToMavenLocal podPublishXCFramework`
 
-![tryAgainScreenshot](images/retryGradle.png)
+![tryAgainScreenshot](images/react_native/retryGradle.png)
 
 Screenshot below shows its successful
-![successScreenshot](images/successBuild.png)
+![successScreenshot](images/react_native/successBuild.png)
 
 Fifth Command - Set the environment variable of THETA_CLIENT with `setx path "%THETA_CLIENT%;C:\Users\Erik Rodriguez\Projects\theta-client"` substituting for your own path to the directory of **theta-client** which you can get with the `pwd` command 
 
-![exportVarScreenshot](images/exportVar.png)
+![exportVarScreenshot](images/react_native/exportVar.png)
 
 Sixth Command - Go into **react-native** directory with `cd react-native`
