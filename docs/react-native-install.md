@@ -44,7 +44,7 @@ Resources
 ## Command Line Steps
 
 First Command - Clone the Repo with `git clone https://github.com/ricohapi/theta-client.git`
-![firstCommand](images/gitCloneThetaClient.png)
+![firstCommand](images/react_native/gitCloneThetaClient.png)
 
 Second Command -  Go into  **theta-client** directory with `cd theta-client`
 ![secondCommand](images/cdThetaClient1.png)
