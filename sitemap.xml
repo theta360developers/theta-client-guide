@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/camera_compare/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/compression/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/flutter/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/react-native-install/</loc>
-         <lastmod>2023-03-10</lastmod>
+         <lastmod>2023-03-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
