@@ -4,10 +4,10 @@
 
 ## Overview
 
-This section covers the installation process for React Native on **Windows OS** so that we can run the `demo-react-native`. 
-Another section will cover the installation for Mac OS. 
+This section covers the installation process for React Native on **Windows 11** so that we can run the `demo-react-native`. 
+Another section will cover the installation for macOS. 
 
-For this installation you will need to install **node.js** if you haven't already. 
+For this installation you will need to install **Node.js** if you haven't already. 
 
 There will be videos and links in the resource section for the installation of node.js on your computer. This article also covers how to build the `theta-client` and make it available to `demo-react-native`, as well as building the `demo-react-native` and running it on an Android emulator. 
 
@@ -19,7 +19,7 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 2. Build `demo-react-native`
 3. Test the `demo-react-native` build on **THETA X** with an emulator
     ![placeholder](http://via.placeholder.com/600x300)
-4. Test all demo features : List Files, Take Photo
+4. Test all demo features: List Files, Take Photo
 
 Resources
 
@@ -37,6 +37,7 @@ Resources
 | RAM         | 16.0 GB |
 | OS          | Windows 11 Home |
 
+THETA X running firmware 1.41.0
 
 # React Native install on Windows
 
