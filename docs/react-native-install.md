@@ -4,11 +4,14 @@
 
 ## Overview
 
-Guide covers the installation process of React Native on **Windows OS** so that we can run the `demo-react-native`. 
-Another section will cover the installation for Mac OS. For this installation you will need to install **node.js** if you haven't already. 
-Their will be videos and links in the resource section for the installation of node.js on your computer. Article also covers how to build the `theta-client` and make it available to `demo-react-native`. 
-As well as building the `demo-react-native` and running it on an android emulator. 
-My results will be shown in the article with the **THETA X** running the react native demo app provided by the RICOH API.
+This section covers the installation process for React Native on **Windows OS** so that we can run the `demo-react-native`. 
+Another section will cover the installation for Mac OS. 
+
+For this installation you will need to install **node.js** if you haven't already. 
+
+There will be videos and links in the resource section for the installation of node.js on your computer. This article also covers how to build the `theta-client` and make it available to `demo-react-native`, as well as building the `demo-react-native` and running it on an Android emulator. 
+
+The results will be shown using the **THETA X** running the `demo-react-native`  using the THETA API.
 
 ## General Steps to run React Native Demo on Windows
 
