@@ -1,4 +1,4 @@
-# React Native Mac Setup
+## React Native Mac Setup
 
 ## Overview
 
