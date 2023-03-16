@@ -26,6 +26,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://theta360developers.github.io/theta-client-guide/react-native-mac/</loc>
+         <lastmod>2023-03-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://theta360developers.github.io/theta-client-guide/verify_image/</loc>
          <lastmod>2023-03-16</lastmod>
          <changefreq>daily</changefreq>
