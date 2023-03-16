@@ -18,7 +18,6 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 1. Build the `theta-client` and make it available to `demo-react-native`
 2. Build `demo-react-native`
 3. Test the `demo-react-native` build on **THETA X** with an emulator
-    ![placeholder](http://via.placeholder.com/600x300)
 4. Test all demo features: List Files, Take Photo
 
 Resources
