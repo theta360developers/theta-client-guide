@@ -9,7 +9,7 @@ The RICOH THETA X can take 11K and 5.5 images.
 
 ## File Size
 
-You can use the file size to quickly see if the expected resolution
+You can use the file size to quickly see if the expected resolution.
 
 <figure markdown>
 ![11K vs 5.5K](images/camera_compare/11k_5_5K.png)
