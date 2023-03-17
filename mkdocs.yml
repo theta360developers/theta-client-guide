@@ -3,6 +3,7 @@ site_description: RICOH THETA Web API and mobile development
 site_url: https://theta360developers.github.io/theta-client-guide/
 nav:
   - Home: index.md
+  - Android: android.md
   - Flutter: flutter.md
   - React Native: 'react-native-install.md'
   - Camera Comparison: 'camera_compare.md'
