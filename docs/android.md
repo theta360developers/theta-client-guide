@@ -2,6 +2,12 @@
 
 Native Android kotlin build.
 
+## tutorial resources
+
+* YouTube: [Android demo complete build and install](https://youtu.be/l8X6amOmHXI)
+* YouTube: [Improved Android live preview for SC2](https://youtu.be/shg2kX7Q8pM)
+  * includes full build process again
+
 ## build theta-client
 
 1. clone theta-client repo from
