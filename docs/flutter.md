@@ -4,15 +4,41 @@ Official RICOH [demo-flutter](https://github.com/ricohapi/theta-client/tree/main
 
 ## Community Video Tutorials
 
-* [theta-client new Flutter App from the beginning - blank editor to Android app](https://youtu.be/EAwT2j0x5VU)
-* [Equirectangular to 360 Image in Flutter  with Panorama Package](https://youtu.be/9hWUU6G3Ank) - published February 21, 2023
-* [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) - published Feb 8, 2023.
+* [theta-client new Flutter App from the beginning - blank editor to Android
+app](https://youtu.be/EAwT2j0x5VU)
+* [Equirectangular to 360 Image in Flutter  with Panorama
+Package](https://youtu.be/9hWUU6G3Ank) - published February 21, 2023
+* [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) -
+published Feb 8, 2023.
+
+## Environment
+
+At the time of writing, the main branch is 16 commits ahead of release 1.0.0.
+The configuration process may have changed.
+This tutorial is based on
+[version 1.0.0 of
+theta-client](https://github.com/ricohapi/theta-client/releases/tag/1.0.0),
+the most recent release.
+
+### checkout and build 1.0.0
+
+```text
+git clone https://github.com/ricohapi/theta-client.git
+cd theta-client
+git tag
+ 1.0.0
+git checkout 1.0.0
+ Note: switching to '1.0.0'.
+git switch -c release.1.0.0
+ Switched to a new branch 'release.1.0.0'
+./gradlew publishToMavenLocal
+```
 
 ## Building a New App on Windows
 
 1. build theta-client
 1. copy `theta-client/kotlin-multiplatform/build/outputs/aar/*.aar` into
-`theta-client/flutter/android/aar` 
+`theta-client/flutter/android/aar`
 new Flutter project
 1. create new Flutter project (example `theta_tutorial`)
 1. copy `theta-client/flutter/*` into `theta_tutorial/packages/theta_client_flutter/`
@@ -41,7 +67,7 @@ dependencies {
 }
 ```
 
-Also, set MinSdkVersion to 26
+Set MinSdkVersion to 26
 
 ```groovy
 MinSdkVersion 26
@@ -117,7 +143,7 @@ The key part is:
 
 On PowerShell, copy the `*.aar` files into `./flutter/android/aar`
 
-```
+```text
 PS C:theta-client> copy .\kotlin-multiplatform\build\outputs\aar\*.aar .\flutter\android\aar\
 PS C:theta-client> cd .\flutter\android\aar\
 PS C:theta-client\flutter\android\aar> ls
@@ -143,7 +169,7 @@ Copy the contents `.\flutter` into the new `theta_client_flutter` folder.
 
 In `demo-flutter`, run `flutter pub get`
 
-```
+```text
 PS C:theta-client\demos\demo-flutter> flutter pub get
 Running "flutter pub get" in demo-flutter...
 Resolving dependencies... (1.1s)
@@ -176,7 +202,7 @@ Start an Android emulator.
 
 Run the Flutter application on the emulator.
 
-```
+```text
 PS C:theta-client\demos\demo-flutter> flutter run -d emulator-5554
 Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
 Running Gradle task 'assembleDebug'...                             80.8s
@@ -202,15 +228,18 @@ After pressing take picture, the live preview will appear.
 
 ![live preview](images/flutter/windows/live_preview.png)
 
+## Related Articles
+
+* [building Flutter Android app on Linux workstation](flutter/new-project-on-linux.md)
 
 ## Troubleshooting
 
-
 ### Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
 
-In `flutter_project_root/android/app/build.gradle`, specify `theta-client-debug.aar` in the dependencies.
+In `flutter_project_root/android/app/build.gradle`,
+specify `theta-client-debug.aar` in the dependencies.
 
-```
+```text
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')
