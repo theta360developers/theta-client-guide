@@ -1,6 +1,6 @@
 # Running demo-android
 
-Native Android kotlin build.
+Native Android Kotlin build.
 
 ## tutorial resources
 
@@ -64,11 +64,11 @@ The password is the numerical digits of the serial number.
 <figcaption>Connect workstation to RICOH THETA as hotspot</figcaption>
 </figure>
 
-Press take picture to see a live preview.
+Press _Take a photo_ button to see a live preview. Press
+the teal shutter button to take the picture.
 
 <figure markdown>
 ![live preview](images/android/live-preview.png)
 <figcaption>live preview shown prior to taking picture</figcaption>
 </figure>
 
-take picture
