@@ -10,20 +10,20 @@
       
       
       
-        <link rel="canonical" href="https://theta360developers.github.io/theta-client-guide/camera_compare/">
+        <link rel="canonical" href="https://theta360developers.github.io/theta-client-guide/android/">
       
       
-        <link rel="prev" href="../react-native-install/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../compression/">
+        <link rel="next" href="../flutter/">
       
       <link rel="icon" href="../images/icon/favicon-16x16.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
     
     
       
-        <title>Camera Comparison - theta-client guide</title>
+        <title>Android - theta-client guide</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#model-comparison" class="md-skip">
+        <a href="#running-demo-android" class="md-skip">
           Skip to content
         </a>
       
@@ -117,7 +117,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Camera Comparison
+              Android
             
           </span>
         </div>
@@ -215,11 +215,73 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../android/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Android
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tutorial-resources" class="md-nav__link">
+    tutorial resources
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-theta-client" class="md-nav__link">
+    build theta-client
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#build-demo-android" class="md-nav__link">
+    build demo-android
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#take-pictures" class="md-nav__link">
+    Take Pictures
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -260,73 +322,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Camera Comparison
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../camera_compare/" class="md-nav__link">
         Camera Comparison
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#original-images-used-in-test" class="md-nav__link">
-    Original Images Used in Test
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4x-zoom" class="md-nav__link">
-    4x zoom
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3x-zoom" class="md-nav__link">
-    3x zoom
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2x-zoom" class="md-nav__link">
-    2x zoom
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -388,29 +388,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#original-images-used-in-test" class="md-nav__link">
-    Original Images Used in Test
+  <a href="#tutorial-resources" class="md-nav__link">
+    tutorial resources
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4x-zoom" class="md-nav__link">
-    4x zoom
+  <a href="#build-theta-client" class="md-nav__link">
+    build theta-client
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3x-zoom" class="md-nav__link">
-    3x zoom
+  <a href="#build-demo-android" class="md-nav__link">
+    build demo-android
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2x-zoom" class="md-nav__link">
-    2x zoom
+  <a href="#take-pictures" class="md-nav__link">
+    Take Pictures
   </a>
   
 </li>
@@ -430,65 +430,62 @@
                   
 
 
-<h1 id="model-comparison">Model Comparison</h1>
-<p>The THETA X can shoot an 11K image compared to the 5.4K image of the SC2.</p>
-<p>To take advantage of the higher-resolution images of the THETA X,
-developers may wish to optimize the viewer and enable zoom for
-high-detail areas such as the climate control and media center.</p>
-<figure>
-<p><img alt="5x zoom" src="../images/camera_compare/5x_zoom.jpeg" /></p>
-<figcaption>5x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
-</figure>
-<h2 id="original-images-used-in-test">Original Images Used in Test</h2>
+<h1 id="running-demo-android">Running demo-android</h1>
+<p>Native Android Kotlin build.</p>
+<h2 id="tutorial-resources">tutorial resources</h2>
 <ul>
-<li><a href="https://drive.google.com/file/d/18sau30LQEdRpib4LrJSD4Eh9OMNJ00n7/view?usp=sharing">RICOH THETA X</a>
-11K, auto-HDR</li>
-<li><a href="https://drive.google.com/file/d/14iCkb7XDoSiBml1ZDc-2q08dfvthTCUo/view?usp=sharing">RICOH THETA SC2</a>
-5.4K, auto-HDR</li>
+<li>YouTube: <a href="https://youtu.be/l8X6amOmHXI">Android demo complete build and install</a></li>
+<li>YouTube: <a href="https://youtu.be/shg2kX7Q8pM">Improved Android live preview for SC2</a></li>
+<li>includes full build process again</li>
 </ul>
-<h2 id="4x-zoom">4x zoom</h2>
-<p>In the following example, both images are zoomed 4x. Developers
-can enable pinch-to-zoom or set a preset zoom. This example
-shows a preset zoom.</p>
-<p>The client control knob features are easier to identify in the
-THETA X (left image).</p>
+<h2 id="build-theta-client">build theta-client</h2>
+<ol>
+<li>clone theta-client repo from
+<a href="https://github.com/ricohapi/theta-client.git">https://github.com/ricohapi/theta-client.git</a></li>
+<li>cd into theta-client</li>
+<li>build theta-client aar</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git clone https://github.com/ricohapi/theta-client.git
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd theta-client
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>./gradlew publishToMavenLocal
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Starting a Gradle Daemon (subsequent builds will be faster)
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&lt;--
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>...
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>...
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>BUILD SUCCESSFUL in 31s
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>59 actionable tasks: 59 executed
+</span></code></pre></div>
+<h2 id="build-demo-android">build demo-android</h2>
+<p>Open <code>demos/demo-android</code> in Android Studio.</p>
+<p>I'm using Electric Eel for this test.</p>
 <figure>
-<p><img alt="4x zoom" src="../images/camera_compare/4x_zoom.jpeg" /></p>
-<figcaption>4x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
+<p><img alt="android studio" src="../images/android/android-studio.png" /></p>
+<figcaption>demo-android in Android Studio Electric Eel</figcaption>
 </figure>
-<h2 id="3x-zoom">3x zoom</h2>
-<p>At 3x zoom, the differences are noticeable, but not as dramatic.
-The difference in the lighting is partially due the HDR capability
-of the THETA X.</p>
+<p>Press run in Android Studio.</p>
 <figure>
-<p><img alt="3x zoom" src="../images/camera_compare/3x_zoom.jpeg" /></p>
-<figcaption>3x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
+<p><img alt="run" src="../images/android/run.png" /></p>
+<figcaption>Press run to build and install</figcaption>
 </figure>
-<h2 id="2x-zoom">2x zoom</h2>
-<p>The next set of examples show 2x zoom as a reasonable default zoom level for
-navigation.</p>
+<p>When the build is successful, it will appear in the Android Virtual Devices (AVD).</p>
 <figure>
-<p><img alt="2x zoom 1" src="../images/camera_compare/2x_zoom_1.jpeg" /></p>
-<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
+<p><img alt="android studio" src="../images/android/build-successful.png" /></p>
+<figcaption>Running in Pixel 4 AVD</figcaption>
 </figure>
+<h2 id="take-pictures">Take Pictures</h2>
+<p>Connect your workstation to the RICOH THETA camera.
+The password is the numerical digits of the serial number.</p>
 <figure>
-<p><img alt="2x zoom steering wheel" src="../images/camera_compare/2x_zoom_steering_wheel.jpeg" /></p>
-<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
+<p><img alt="wifi connection" src="../images/android/connect.png" /></p>
+<figcaption>Connect workstation to RICOH THETA as hotspot</figcaption>
 </figure>
+<p>Press <em>Take a photo</em> button to see a live preview. Press
+the teal shutter button to take the picture.</p>
 <figure>
-<p><img alt="2x zoom door" src="../images/camera_compare/2x_zoom_door.jpeg" /></p>
-<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
-</figure>
-<figure>
-<p><img alt="2x zoom glove box" src="../images/camera_compare/2x_zoom_glove_box.jpeg" /></p>
-<figcaption>2x zoom: THETA X (left) and THETA SC2 (right)
-</figcaption>
+<p><img alt="live preview" src="../images/android/live-preview.png" /></p>
+<figcaption>live preview shown prior to taking picture</figcaption>
 </figure>
 
 
