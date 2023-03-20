@@ -84,22 +84,60 @@ By default the path to the SDK usually is `C:\Users\UserName\AppData\Local\Andro
 
 ## Command Line Steps Continued
 
-Fourth Command - Try the Build Gradlew command again `./gradlew publishToMavenLocal podPublishXCFramework`
+Retry Third Command - Try the Build Gradlew command again `./gradlew publishToMavenLocal podPublishXCFramework`
 
 ![tryAgainScreenshot](images/react_native/retryGradle.png)
 
 Screenshot below shows its successful
 ![successScreenshot](images/react_native/successBuild.png)
 
-Fifth Command - Set the environment variable of THETA_CLIENT with the process shown above using the Windows Environment variable editor. 
+Fifth Command - Set the environment variable of THETA_CLIENT with the process shown above using the Windows Environment Variable Editor. 
 
 `Variable Name : THETA_CLIENT`
 
 `Variable Path : C:\Users\Erik Rodriguez\Projects\theta-client`
 
+Substitute the variable path for your local path to `theta-client`
+
 ![exportVarScreenshot](images/react_native/exportVar.png)
 
-Check if it sucessfully 
+Check if it sucessfully set the variable with `echo $Env:THETA_CLIENT` it should return the path of the THETA_CLIENT variable if set correctly
+
+![correctPath](images/react_native/checkPath.png)
+
 
 Sixth Command - Go into **react-native** directory with `cd react-native`
 
+![cdReactNative](images/react_native/cdreactnative.png)
+
+Seventh Command - run `bash ./mkpackage.sh` and as it appears we have errors to fix
+
+![bashCommand](images/react_native/bashcommand.png)
+
+To fix the mkpackage error:
+
+1. Open up the VSCode editor, install it if you don't have it
+
+2. Open the file called `mkpackage.sh` in the `theta-client\react-native` directory
+
+3. Convert the `mkpackage.sh` file `CRLF` to `LF` by clicking on the bottom right `CRLF` button and changing it to `LF` as shown
+
+![convertFile](images/react_native/convertFile.png)
+
+4. Save the file by pressing `ctrl-s` and you should be good to go!
+
+Retry Seventh Command - run `bash ./mkpackage.sh`
+
+![bashGood](images/react_native/bashsuccesful.png)
+
+Go into the `demo-react-native` folder as shown below from the root directory `theta-client`
+
+    cd demos
+    cd demo-react-native
+![Alt text](images/react_native/goIntodemo.png)
+
+Once you are in `theta-client\demos\demo-react-native`
+
+Eigth command - run `yarn install` if you dont have yarn downloaded on your computer already then you need to get it by running 
+
+![errorYarn](images/react_native/yarninstallerror.png)
