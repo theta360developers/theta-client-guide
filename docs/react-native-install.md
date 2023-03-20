@@ -95,8 +95,11 @@ Fifth Command - Set the environment variable of THETA_CLIENT with the process sh
 
 `Variable Name : THETA_CLIENT`
 
-`Variable Path : C:\Users\Erik Rodriguez\Projects\theta-client\react-native`
+`Variable Path : C:\Users\Erik Rodriguez\Projects\theta-client`
 
 ![exportVarScreenshot](images/react_native/exportVar.png)
 
+Check if it sucessfully 
+
 Sixth Command - Go into **react-native** directory with `cd react-native`
+
