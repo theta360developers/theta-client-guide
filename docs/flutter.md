@@ -4,10 +4,35 @@ Official RICOH [demo-flutter](https://github.com/ricohapi/theta-client/tree/main
 
 ## Community Video Tutorials
 
-* [theta-client new Flutter App from the beginning - blank editor to Android app](https://youtu.be/EAwT2j0x5VU)
-* [Equirectangular to 360 Image in Flutter  with Panorama Package](https://youtu.be/9hWUU6G3Ank)
- published February 21, 2023
-* [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) - published Feb 8, 2023.
+* [theta-client new Flutter App from the beginning - blank editor to Android
+app](https://youtu.be/EAwT2j0x5VU)
+* [Equirectangular to 360 Image in Flutter  with Panorama
+Package](https://youtu.be/9hWUU6G3Ank) - published February 21, 2023
+* [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) -
+published Feb 8, 2023.
+
+## Environment
+
+At the time of writing, the main branch is 16 commits ahead of release 1.0.0.
+The configuration process may have changed.
+This tutorial is based on
+[version 1.0.0 of
+theta-client](https://github.com/ricohapi/theta-client/releases/tag/1.0.0),
+the most recent release.
+
+### checkout and build 1.0.0
+
+```text
+git clone https://github.com/ricohapi/theta-client.git
+cd theta-client
+git tag
+ 1.0.0
+git checkout 1.0.0
+ Note: switching to '1.0.0'.
+git switch -c release.1.0.0
+ Switched to a new branch 'release.1.0.0'
+./gradlew publishToMavenLocal
+```
 
 ## Building a New App on Windows
 
@@ -42,7 +67,7 @@ dependencies {
 }
 ```
 
-Also, set MinSdkVersion to 26
+Set MinSdkVersion to 26
 
 ```groovy
 MinSdkVersion 26
@@ -203,14 +228,18 @@ After pressing take picture, the live preview will appear.
 
 ![live preview](images/flutter/windows/live_preview.png)
 
+## Related Articles
+
+* [building Flutter Android app on Linux workstation](flutter/new-project-on-linux.md)
+
 ## Troubleshooting
 
 ### Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
 
-In `flutter_project_root/android/app/build.gradle`, specify `theta-client-debug.aar`
-in the dependencies.
+In `flutter_project_root/android/app/build.gradle`,
+specify `theta-client-debug.aar` in the dependencies.
 
-```groovy
+```text
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')
