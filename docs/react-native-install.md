@@ -96,3 +96,5 @@ Fifth Command - Set the environment variable of THETA_CLIENT with `setx path "%T
 ![exportVarScreenshot](images/react_native/exportVar.png)
 
 Sixth Command - Go into **react-native** directory with `cd react-native`
+
+Test PR for today
