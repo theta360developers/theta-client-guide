@@ -4,10 +4,35 @@ Official RICOH [demo-flutter](https://github.com/ricohapi/theta-client/tree/main
 
 ## Community Video Tutorials
 
-* [theta-client new Flutter App from the beginning - blank editor to Android app](https://youtu.be/EAwT2j0x5VU)
-* [Equirectangular to 360 Image in Flutter  with Panorama Package](https://youtu.be/9hWUU6G3Ank)
- published February 21, 2023
-* [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) - published Feb 8, 2023.
+* [theta-client new Flutter App from the beginning - blank editor to Android
+app](https://youtu.be/EAwT2j0x5VU) - published March 2, 2023
+* [Equirectangular to 360 Image in Flutter  with Panorama
+Package](https://youtu.be/9hWUU6G3Ank) - published February 21, 2023
+* [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) -
+published Feb 8, 2023.
+
+## Environment
+
+At the time of writing, the main branch is 16 commits ahead of release 1.0.0.
+The configuration process may have changed.
+This tutorial is based on
+[version 1.0.0 of
+theta-client](https://github.com/ricohapi/theta-client/releases/tag/1.0.0),
+the most recent release.
+
+### checkout and build 1.0.0
+
+```text
+git clone https://github.com/ricohapi/theta-client.git
+cd theta-client
+git tag
+ 1.0.0
+git checkout 1.0.0
+ Note: switching to '1.0.0'.
+git switch -c release.1.0.0
+ Switched to a new branch 'release.1.0.0'
+./gradlew publishToMavenLocal
+```
 
 ## Building a New App on Windows
 
