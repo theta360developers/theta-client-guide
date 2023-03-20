@@ -5,7 +5,7 @@ Official RICOH [demo-flutter](https://github.com/ricohapi/theta-client/tree/main
 ## Community Video Tutorials
 
 * [theta-client new Flutter App from the beginning - blank editor to Android
-app](https://youtu.be/EAwT2j0x5VU)
+app](https://youtu.be/EAwT2j0x5VU) - published March 2, 2023
 * [Equirectangular to 360 Image in Flutter  with Panorama
 Package](https://youtu.be/9hWUU6G3Ank) - published February 21, 2023
 * [RICOH theta-client Flutter Build on Windows](https://youtu.be/dJV5s46xFA0) -
