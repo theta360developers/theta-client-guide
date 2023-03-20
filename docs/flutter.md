@@ -39,6 +39,7 @@ git switch -c release.1.0.0
 1. build theta-client
 1. copy `theta-client/kotlin-multiplatform/build/outputs/aar/*.aar` into
 `theta-client/flutter/android/aar`
+`theta-client/flutter/android/aar`
 new Flutter project
 1. create new Flutter project (example `theta_tutorial`)
 1. copy `theta-client/flutter/*` into `theta_tutorial/packages/theta_client_flutter/`
@@ -144,6 +145,7 @@ The key part is:
 On PowerShell, copy the `*.aar` files into `./flutter/android/aar`
 
 ```text
+```text
 PS C:theta-client> copy .\kotlin-multiplatform\build\outputs\aar\*.aar .\flutter\android\aar\
 PS C:theta-client> cd .\flutter\android\aar\
 PS C:theta-client\flutter\android\aar> ls
@@ -169,6 +171,7 @@ Copy the contents `.\flutter` into the new `theta_client_flutter` folder.
 
 In `demo-flutter`, run `flutter pub get`
 
+```text
 ```text
 PS C:theta-client\demos\demo-flutter> flutter pub get
 Running "flutter pub get" in demo-flutter...
@@ -203,6 +206,7 @@ Start an Android emulator.
 Run the Flutter application on the emulator.
 
 ```text
+```text
 PS C:theta-client\demos\demo-flutter> flutter run -d emulator-5554
 Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
 Running Gradle task 'assembleDebug'...                             80.8s
@@ -228,18 +232,14 @@ After pressing take picture, the live preview will appear.
 
 ![live preview](images/flutter/windows/live_preview.png)
 
-## Related Articles
-
-* [building Flutter Android app on Linux workstation](flutter/new-project-on-linux.md)
-
 ## Troubleshooting
 
 ### Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
 
-In `flutter_project_root/android/app/build.gradle`,
-specify `theta-client-debug.aar` in the dependencies.
+In `flutter_project_root/android/app/build.gradle`, specify `theta-client-debug.aar`
+in the dependencies.
 
-```text
+```groovy
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')

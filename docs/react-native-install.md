@@ -91,10 +91,15 @@ Fourth Command - Try the Build Gradlew command again `./gradlew publishToMavenLo
 Screenshot below shows its successful
 ![successScreenshot](images/react_native/successBuild.png)
 
-Fifth Command - Set the environment variable of THETA_CLIENT with `setx path "%THETA_CLIENT%;C:\Users\Erik Rodriguez\Projects\theta-client"` substituting for your own path to the directory of **theta-client** which you can get with the `pwd` command 
+Fifth Command - Set the environment variable of THETA_CLIENT with the process shown above using the Windows Environment variable editor. 
+
+`Variable Name : THETA_CLIENT`
+
+`Variable Path : C:\Users\Erik Rodriguez\Projects\theta-client`
 
 ![exportVarScreenshot](images/react_native/exportVar.png)
 
+Check if it sucessfully 
+
 Sixth Command - Go into **react-native** directory with `cd react-native`
 
-Test PR for today
