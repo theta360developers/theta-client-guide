@@ -116,7 +116,7 @@ Seventh Command - run `bash ./mkpackage.sh` and as it appears we have errors to 
 
 To fix the mkpackage error:
 
-You need to Convert your file to Unix format. This is one way to do it and their may be other ways.
+You need to Convert your file to Unix format. This is one way to do it and there may be other ways.
 
 1. Open up the VSCode editor, install it if you don't have it
 
