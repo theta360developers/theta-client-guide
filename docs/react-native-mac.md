@@ -5,7 +5,7 @@
 This section will cover the basics of installing React Native on macOS. 
 It will also cover the preparation of the react-native demo.
 
-Use the README.md file here: https://github.com/ricohapi/theta-client/tree/main/react-native
+Use the README.md file here: [https://github.com/ricohapi/theta-client/tree/main/react-native](https://github.com/ricohapi/theta-client/tree/main/react-native)
 
 ## Community Video Tutorials
 
