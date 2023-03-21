@@ -116,6 +116,8 @@ Seventh Command - run `bash ./mkpackage.sh` and as it appears we have errors to 
 
 To fix the mkpackage error:
 
+You need to Convert your file to Unix format. This is one way to do it and their may be other ways.
+
 1. Open up the VSCode editor, install it if you don't have it
 
 2. Open the file called `mkpackage.sh` in the `theta-client\react-native` directory
@@ -136,8 +138,44 @@ Go into the `demo-react-native` folder as shown below from the root directory `t
     cd demo-react-native
 ![Alt text](images/react_native/goIntodemo.png)
 
-Once you are in `theta-client\demos\demo-react-native`
+Once you are in `theta-client\demos\demo-react-native` follow the next step
 
-Eigth command - run `yarn install` if you dont have yarn downloaded on your computer already then you need to get it by running 
+Eigth command - run `yarn install` if you dont have yarn downloaded on your computer already then you need to get it by running `npm install --global yarn` 
+
+Note 1: May need to run Powershell in administrator mode if command isn't working
+
+Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in a section below
 
 ![errorYarn](images/react_native/yarninstallerror.png)
+
+![npmYarnInstall](images/react_native/npmInstallYarn.png)
+
+![goodYarnInstall](images/react_native/yarnInstallGood.png)
+
+## How to Install Node.js on Windows
+
+1. Download the nvm-setup.exe in the link below
+
+[NVM for Windows Download](https://github.com/coreybutler/nvm-windows/releases)
+
+![nvmSetup](images/react_native/nvmSetupExe.png)
+
+2. Run the nvm-setup.exe by clicking on it and follow the on screen setup instructions
+
+3. Check if you installed NVM sucessfully by using the command `nvm --version`
+
+![nvmVersion](images/react_native/nvmVersion.png)
+
+4. To install **Node.js** with **nvm** you can now run `nvm install lts`
+to install the long term support version of node
+
+![nvmInstall](images/react_native/nvmInstall.png)
+
+5. Check which versions of **node** you have then **use** it as shown with `nvm list` and then `nvm use` make sure you are in administrator mode
+
+![nvmUse](images/react_native/nvmUse.png)
+
+6. Check if node is working by running `node --version`
+
+![nodeVersion](images/react_native/nodeVersion.png)
+
