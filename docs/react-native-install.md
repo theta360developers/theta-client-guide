@@ -152,7 +152,16 @@ Note 2: May need to Install `Node.js` if your `npm` command isn't working which 
 
 ![goodYarnInstall](images/react_native/yarnInstallGood.png)
 
-## How to Install Node.js on Windows
+# Time to Run the Demo on Android
+
+Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator.
+
+**In Progress**...
+
+
+
+
+# How to Install Node.js on Windows
 
 1. Download the nvm-setup.exe in the link below
 
