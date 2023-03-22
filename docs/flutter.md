@@ -246,3 +246,11 @@ dependencies {
 
 }
 ```
+
+## Demonstration of Live Preview with 360 Navigation
+
+<figure markdown>
+
+![livePreview with navigation](https://www.dropbox.com/s/plndb3g3w5ycu6k/streaming_screenshot.gif?raw=1){ loading=lazy }
+<figcaption>livePreview with navigation</figcaption>
+</figure>
