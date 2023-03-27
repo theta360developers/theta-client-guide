@@ -141,6 +141,10 @@ class _MiniAppState extends State<MiniApp> {
 
 ```
 
+## Example Code for Minimal Project
+
+* [theta_client_minimal](https://github.com/codetricity/theta_client_minimal)
+
 ## Troubleshooting
 
 If the build fails, make sure you have the `aar` files accessible in
