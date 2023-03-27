@@ -46,13 +46,22 @@ THETA X running firmware 1.41.0
 
 ## Command Line Steps
 
-First Command - Clone the Repo with `git clone https://github.com/ricohapi/theta-client.git`
+### First Command - Clone the Repo
+
+with  `git clone https://github.com/ricohapi/theta-client.git`
+
 ![firstCommand](images/react_native/gitCloneThetaClient.png)
 
-Second Command -  Go into  **theta-client** directory with `cd theta-client`
+### Second Command -  Go into  **theta-client** directory
+
+with `cd theta-client`
+
 ![secondCommand](images/react_native/cdThetaClient1.png)
 
-Third Command - Build Gradlew with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, the problem is the SDK location is not found. My solution is to set the environment variable of the SDK.
+### Third Command - Build Gradlew
+
+with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, the problem is the SDK location is not found. My solution is to set the environment variable of the SDK.
+
 ![thirdCommand](images/react_native/gradleWPublishFail.png)
 
 ## Steps to Fix for Build Failure
@@ -88,7 +97,9 @@ Retry Third Command - Try the Build Gradlew command again `./gradlew publishToMa
 Screenshot below shows its successful
 ![successScreenshot](images/react_native/successBuild.png)
 
-Fifth Command - Set the environment variable of THETA_CLIENT with the process shown above using the Windows Environment Variable Editor.
+### Fourth Command - Set the environment variable of THETA_CLIENT
+
+with the process shown above using the Windows Environment Variable Editor.
 
 `Variable Name : THETA_CLIENT`
 
@@ -102,11 +113,15 @@ Check if it sucessfully set the variable with `echo $Env:THETA_CLIENT` it should
 
 ![correctPath](images/react_native/checkPath.png)
 
-Sixth Command - Go into **react-native** directory with `cd react-native`
+### Fifth Command - Go into **react-native** directory
+
+with `cd react-native`
 
 ![cdReactNative](images/react_native/cdreactnative.png)
 
-Seventh Command - run `bash ./mkpackage.sh` and as it appears we have errors to fix
+### Sixth Command - run `bash ./mkpackage.sh`
+
+and as it appears we have errors to fix
 
 ![bashCommand](images/react_native/bashcommand.png)
 
@@ -124,7 +139,7 @@ You need to Convert your file to Unix format. This is one way to do it and there
 
 4. Save the file by pressing `ctrl-s` and you should be good to go!
 
-Retry Seventh Command - run `bash ./mkpackage.sh`
+Retry Sixth Command - run `bash ./mkpackage.sh`
 
 ![bashGood](images/react_native/bashsuccesful.png)
 
@@ -137,7 +152,9 @@ Go into the `demo-react-native` folder as shown below from the root directory `t
 
 Once you are in `theta-client\demos\demo-react-native` follow the next step
 
-Eigth command - run `yarn install` if you dont have yarn downloaded on your computer already then you need to get it by running `npm install --global yarn`
+### Seventh command - run `yarn install`
+
+if you dont have yarn downloaded on your computer already then you need to get it by running `npm install --global yarn`
 
 Note 1: May need to run Powershell in administrator mode if command isn't working
 
