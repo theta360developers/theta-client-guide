@@ -4,7 +4,9 @@ site_url: https://theta360developers.github.io/theta-client-guide/
 nav:
   - Home: index.md
   - Android: android.md
-  - Flutter: flutter.md
+  - Flutter: 
+      - 'Flutter Demo': 'flutter.md'
+      - 'Build on Linux': 'flutter/new-project-on-linux.md'
   - React Native: 'react-native-install.md'
   - Camera Comparison: 'camera_compare.md'
   - Image Compression: 'compression.md'
@@ -23,6 +25,7 @@ theme:
   favicon: images/icon/favicon-16x16.png
   features:
     - content.code.copy
+    - navigation.expand
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
