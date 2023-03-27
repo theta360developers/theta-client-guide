@@ -132,7 +132,8 @@ Go into the `demo-react-native` folder as shown below from the root directory `t
 
     cd demos
     cd demo-react-native
-![Alt text](images/react_native/goIntodemo.png)
+
+![cdIntoDemo](images/react_native/goIntodemo.png)
 
 Once you are in `theta-client\demos\demo-react-native` follow the next step
 
@@ -140,7 +141,7 @@ Eigth command - run `yarn install` if you dont have yarn downloaded on your comp
 
 Note 1: May need to run Powershell in administrator mode if command isn't working
 
-Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in a section below
+Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in the [Node.js  section](#how-to-install-nodejs-on-windows)
 
 ![errorYarn](images/react_native/yarninstallerror.png)
 
@@ -152,7 +153,7 @@ Note 2: May need to Install `Node.js` if your `npm` command isn't working which 
 
 Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator.
 
-**In Progress**...
+![yarnRunAndroid](images/react_native/yarnrunandroid.png)
 
 ## How to Install Node.js on Windows
 
