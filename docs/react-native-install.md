@@ -50,41 +50,41 @@ THETA X running firmware 1.41.0
 
 with  `git clone https://github.com/ricohapi/theta-client.git`
 
-![firstCommand](images/react_native/gitCloneThetaClient.png)
+![firstCommand](images/react_native/windows/gitCloneThetaClient.png)
 
 ### Second Command -  Go into  **theta-client** directory
 
 with `cd theta-client`
 
-![secondCommand](images/react_native/cdThetaClient1.png)
+![secondCommand](images/react_native/windows/cdThetaClient1.png)
 
 ### Third Command - Build Gradlew
 
 with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, the problem is the SDK location is not found. My solution is to set the environment variable of the SDK.
 
-![thirdCommand](images/react_native/gradleWPublishFail.png)
+![thirdCommand](images/react_native/windows/gradleWPublishFail.png)
 
 ## Steps to Fix for Build Failure
 
 1. Search for env
 
-    ![envVarScrenshot](images/react_native/envVar.png)
+    ![envVarScrenshot](images/react_native/windows/envVar.png)
 
 2. Click on environmental variables
 
-    ![pressOnEnv](images/react_native/envVarPress.png)
+    ![pressOnEnv](images/react_native/windows/envVarPress.png)
 
 3. New System Variable
 
-    ![newEnvVar](images/react_native/newEnvVar.png)
+    ![newEnvVar](images/react_native/windows/newEnvVar.png)
 
 4. Type in the Variable name `ANDROID_HOME` and set the path `C:\Users\UserName\AppData\Local\Android\Sdk`
 
-    ![settingPathScreenshot](images/react_native/settingEnvVar.png)
+    ![settingPathScreenshot](images/react_native/windows/settingEnvVar.png)
 
     By default the path to the SDK usually is `C:\Users\UserName\AppData\Local\Android\Sdk` , Copy the Path substituting for your `UserName`
 
-    ![pathscreenshot](images/react_native/pathScreenshot.png)
+    ![pathscreenshot](images/react_native/windows/pathScreenshot.png)
 
 5. Restart your terminal by closing and relaunching it before trying out the `gradlew` build command again
 
@@ -92,10 +92,10 @@ with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, 
 
 Retry Third Command - Try the Build Gradlew command again `./gradlew publishToMavenLocal podPublishXCFramework`
 
-![tryAgainScreenshot](images/react_native/retryGradle.png)
+![tryAgainScreenshot](images/react_native/windows/retryGradle.png)
 
 Screenshot below shows its successful
-![successScreenshot](images/react_native/successBuild.png)
+![successScreenshot](images/react_native/windows/successBuild.png)
 
 ### Fourth Command - Set the environment variable of THETA_CLIENT
 
@@ -107,23 +107,23 @@ with the process shown above using the Windows Environment Variable Editor.
 
 Substitute the variable path for your local path to `theta-client`
 
-![exportVarScreenshot](images/react_native/exportVar.png)
+![exportVarScreenshot](images/react_native/windows/exportVar.png)
 
 Check if it sucessfully set the variable with `echo $Env:THETA_CLIENT` it should return the path of the THETA_CLIENT variable if set correctly
 
-![correctPath](images/react_native/checkPath.png)
+![correctPath](images/react_native/windows/checkPath.png)
 
 ### Fifth Command - Go into **react-native** directory
 
 with `cd react-native`
 
-![cdReactNative](images/react_native/cdreactnative.png)
+![cdReactNative](images/react_native/windows/cdreactnative.png)
 
 ### Sixth Command - run `bash ./mkpackage.sh`
 
 and as it appears we have errors to fix
 
-![bashCommand](images/react_native/bashcommand.png)
+![bashCommand](images/react_native/windows/bashcommand.png)
 
 To fix the mkpackage error:
 
@@ -135,20 +135,20 @@ You need to Convert your file to Unix format. This is one way to do it and there
 
 3. Convert the `mkpackage.sh` file `CRLF` to `LF` by clicking on the bottom right `CRLF` button and changing it to `LF` as shown
 
-    ![convertFile](images/react_native/convertFile.png)
+    ![convertFile](images/react_native/windows/convertFile.png)
 
 4. Save the file by pressing `ctrl-s` and you should be good to go!
 
 Retry Sixth Command - run `bash ./mkpackage.sh`
 
-![bashGood](images/react_native/bashsuccesful.png)
+![bashGood](images/react_native/windows/bashsuccesful.png)
 
 Go into the `demo-react-native` folder as shown below from the root directory `theta-client`
 
     cd demos
     cd demo-react-native
 
-![cdIntoDemo](images/react_native/goIntodemo.png)
+![cdIntoDemo](images/react_native/windows/goIntodemo.png)
 
 Once you are in `theta-client\demos\demo-react-native` follow the next step
 
@@ -160,17 +160,17 @@ Note 1: May need to run Powershell in administrator mode if command isn't workin
 
 Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in the [Node.js  section](#how-to-install-nodejs-on-windows)
 
-![errorYarn](images/react_native/yarninstallerror.png)
+![errorYarn](images/react_native/windows/yarninstallerror.png)
 
-![npmYarnInstall](images/react_native/npmInstallYarn.png)
+![npmYarnInstall](images/react_native/windows/npmInstallYarn.png)
 
-![goodYarnInstall](images/react_native/yarnInstallGood.png)
+![goodYarnInstall](images/react_native/windows/yarnInstallGood.png)
 
 ## Time to Run the Demo on Android
 
 Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator.
 
-![yarnRunAndroid](images/react_native/yarnrunandroid.png)
+![yarnRunAndroid](images/react_native/windows/yarnrunandroid.png)
 
 ## How to Install Node.js on Windows
 
@@ -178,23 +178,23 @@ Now that we've sucesfully installed the required tools and setup. In the directo
 
     [NVM for Windows Download](https://github.com/coreybutler/nvm-windows/releases)
 
-    ![nvmSetup](images/react_native/nvmSetupExe.png)
+    ![nvmSetup](images/react_native/windows/nvmSetupExe.png)
 
 2. Run the nvm-setup.exe by clicking on it and follow the on screen setup instructions
 
 3. Check if you installed NVM sucessfully by using the command `nvm --version`
 
-    ![nvmVersion](images/react_native/nvmVersion.png)
+    ![nvmVersion](images/react_native/windows/nvmVersion.png)
 
 4. To install **Node.js** with **nvm** you can now run `nvm install lts`
 to install the long term support version of node
 
-    ![nvmInstall](images/react_native/nvmInstall.png)
+    ![nvmInstall](images/react_native/windows/nvmInstall.png)
 
 5. Check which versions of **node** you have then **use** it as shown with `nvm list` and then `nvm use` make sure you are in administrator mode
 
-    ![nvmUse](images/react_native/nvmUse.png)
+    ![nvmUse](images/react_native/windows/nvmUse.png)
 
 6. Check if node is working by running `node --version`
 
-    ![nodeVersion](images/react_native/nodeVersion.png)
+    ![nodeVersion](images/react_native/windows/nodeVersion.png)
