@@ -170,7 +170,7 @@ Note 2: May need to Install `Node.js` if your `npm` command isn't working which 
 
 ## Time to Run the Demo on Android
 
-Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator.
+Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator. Process shown in this [Android Emulator Section](#how-to-setup-the-android-emulator) to setup this emulator before running this command.
 
 ![yarnRunAndroid](images/react_native/windows/yarnrunandroid.png)
 
