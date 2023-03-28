@@ -20,7 +20,7 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 3. Test the `demo-react-native` build on **THETA X** with an emulator
 4. Test all demo features: List Files, Take Photo
 
-Resources
+## Resources
 
 * [GITHUB React Native demo for theta-client](https://github.com/ricohapi/theta-client/tree/main/demos/demo-react-native)
 
@@ -36,13 +36,19 @@ Resources
 | RAM         | 16.0 GB |
 | OS          | Windows 11 Home |
 
-THETA X running firmware 1.41.0
-
-## React Native install on Windows
+* THETA X running firmware 1.41.0
 
 ## Requirements
 
-[Android Studio](https://developer.android.com/studio)
+* [Android Studio](https://developer.android.com/studio)
+
+  * Needed for the SDK and [Emulator Setup](#how-to-setup-the-android-emulator)
+
+* [Java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
+
+* [Node JS](https://github.com/coreybutler/nvm-windows)
+
+  * Recommend to Install with NVM for Windows. Process is shown below in [Node JS Section](#how-to-install-nodejs-on-windows).
 
 ## Command Line Steps
 
@@ -74,19 +80,15 @@ with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, 
 
     ![pressOnEnv](images/react_native/windows/envVarPress.png)
 
-3. New System Variable
+3. New User Variable and Type in the Variable name `ANDROID_HOME` and set the path `C:\Users\UserName\AppData\Local\Android\Sdk`
 
-    ![newEnvVar](images/react_native/windows/newEnvVar.png)
-
-4. Type in the Variable name `ANDROID_HOME` and set the path `C:\Users\UserName\AppData\Local\Android\Sdk`
-
-    ![settingPathScreenshot](images/react_native/windows/settingEnvVar.png)
+    ![androidHome](images/react_native/windows/androidHome.png)
 
     By default the path to the SDK usually is `C:\Users\UserName\AppData\Local\Android\Sdk` , Copy the Path substituting for your `UserName`
 
     ![pathscreenshot](images/react_native/windows/pathScreenshot.png)
 
-5. Restart your terminal by closing and relaunching it before trying out the `gradlew` build command again
+4. Restart your terminal by closing and relaunching it before trying out the `gradlew` build command again
 
 ## Command Line Steps Continued
 
@@ -107,7 +109,7 @@ with the process shown above using the Windows Environment Variable Editor.
 
 Substitute the variable path for your local path to `theta-client`
 
-![exportVarScreenshot](images/react_native/windows/exportVar.png)
+![userVar](images/react_native/windows/userVariable.png)
 
 Check if it sucessfully set the variable with `echo $Env:THETA_CLIENT` it should return the path of the THETA_CLIENT variable if set correctly
 
@@ -172,6 +174,8 @@ Now that we've sucesfully installed the required tools and setup. In the directo
 
 ![yarnRunAndroid](images/react_native/windows/yarnrunandroid.png)
 
+![androidEmulator](images/react_native/windows/androidemulator.png)
+
 ## How to Install Node.js on Windows
 
 1. Download the nvm-setup.exe in the link below
@@ -198,3 +202,23 @@ to install the long term support version of node
 6. Check if node is working by running `node --version`
 
     ![nodeVersion](images/react_native/windows/nodeVersion.png)
+
+## How To Setup the Android Emulator
+
+1. Open up Android Studio
+
+2. Click on Tools then Device Manager
+
+    ![toolsDevice](images/react_native/windows/toolsDevice.png)
+
+3. In the Virtual tab press on Create Device
+
+    ![virtualCreate](images/react_native/windows/virtualCreate.png)
+
+4. Select the device and image, the one that works for me is the `pixel 4` with google play store capabilities and the `tiramisu` image, you may need to press on the download icon for the `image`
+
+    ![pixel4Device](images/react_native/windows/pixel4.png)
+
+    ![tiramisuImage](images/react_native/windows/tiramisu.png)
+
+5. Once you are on the last screen press `finish` and let android studio setup your emulator, then you are done!
