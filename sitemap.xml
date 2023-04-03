@@ -26,6 +26,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://theta360developers.github.io/theta-client-guide/how-to-install-nodejs/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://theta360developers.github.io/theta-client-guide/how-to-setup-android-emulator/</loc>
+         <lastmod>2023-04-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://theta360developers.github.io/theta-client-guide/react-native-install/</loc>
          <lastmod>2023-04-03</lastmod>
          <changefreq>daily</changefreq>
