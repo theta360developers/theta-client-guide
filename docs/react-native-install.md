@@ -42,13 +42,13 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 
 * [Android Studio](https://developer.android.com/studio)
 
-  * Needed for the SDK and [Emulator Setup](#how-to-setup-the-android-emulator)
+    Needed for the SDK and [Emulator Setup](/docs/how-to-setup-android-emulator.md)
 
 * [Java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 
 * [Node JS](https://github.com/coreybutler/nvm-windows)
 
-  * Recommend to Install with NVM for Windows. Process is shown below in [Node JS Section](#how-to-install-nodejs-on-windows).
+  * Recommend to Install with NVM for Windows. Process is shown below in [Node JS Section](/docs/how-to-install-nodejs.md).
 
 ## Command Line Steps
 
@@ -160,7 +160,7 @@ if you dont have yarn downloaded on your computer already then you need to get i
 
 Note 1: May need to run Powershell in administrator mode if command isn't working
 
-Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in the [Node.js  section](#how-to-install-nodejs-on-windows)
+Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in the [Node.js  section](/docs/how-to-install-nodejs.md)
 
 ![errorYarn](images/react_native/windows/yarninstallerror.png)
 
@@ -170,55 +170,8 @@ Note 2: May need to Install `Node.js` if your `npm` command isn't working which 
 
 ## Time to Run the Demo on Android
 
-Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator. Process shown in this [Android Emulator Section](#how-to-setup-the-android-emulator) to setup this emulator before running this command.
+Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator. Process shown in this [Android Emulator Section](/docs/how-to-setup-android-emulator.md) to setup this emulator before running this command.
 
 ![yarnRunAndroid](images/react_native/windows/yarnrunandroid.png)
 
 ![androidEmulator](images/react_native/windows/androidemulator.png)
-
-## How to Install Node.js on Windows
-
-1. Download the nvm-setup.exe in the link below
-
-    [NVM for Windows Download](https://github.com/coreybutler/nvm-windows/releases)
-
-    ![nvmSetup](images/react_native/windows/nvmSetupExe.png)
-
-2. Run the nvm-setup.exe by clicking on it and follow the on screen setup instructions
-
-3. Check if you installed NVM sucessfully by using the command `nvm --version`
-
-    ![nvmVersion](images/react_native/windows/nvmVersion.png)
-
-4. To install **Node.js** with **nvm** you can now run `nvm install lts`
-to install the long term support version of node
-
-    ![nvmInstall](images/react_native/windows/nvmInstall.png)
-
-5. Check which versions of **node** you have then **use** it as shown with `nvm list` and then `nvm use` make sure you are in administrator mode
-
-    ![nvmUse](images/react_native/windows/nvmUse.png)
-
-6. Check if node is working by running `node --version`
-
-    ![nodeVersion](images/react_native/windows/nodeVersion.png)
-
-## How To Setup the Android Emulator
-
-1. Open up Android Studio
-
-2. Click on Tools then Device Manager
-
-    ![toolsDevice](images/react_native/windows/toolsDevice.png)
-
-3. In the Virtual tab press on Create Device
-
-    ![virtualCreate](images/react_native/windows/virtualCreate.png)
-
-4. Select the device and image, the one that works for me is the `pixel 4` with google play store capabilities and the `tiramisu` image, you may need to press on the download icon for the `image`
-
-    ![pixel4Device](images/react_native/windows/pixel4.png)
-
-    ![tiramisuImage](images/react_native/windows/tiramisu.png)
-
-5. Once you are on the last screen press `finish` and let android studio setup your emulator, then you are done!

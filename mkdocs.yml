@@ -7,7 +7,10 @@ nav:
   - Flutter: 
       - 'Flutter Demo': 'flutter.md'
       - 'Build on Linux': 'flutter/new-project-on-linux.md'
-  - React Native: 'react-native-install.md'
+  - React Native: 
+      - 'React Native Install': 'react-native-install.md'
+      - 'How to Install Node.js': 'how-to-install-nodejs.md'
+      - 'How to Install Android Emulator': 'how-to-setup-android-emulator.md'
   - Camera Comparison: 'camera_compare.md'
   - Image Compression: 'compression.md'
   - Verify Images: 'verify_image.md'
