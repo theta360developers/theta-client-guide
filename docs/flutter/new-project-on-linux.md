@@ -44,7 +44,10 @@ dependencies:
 
 ## configure Android build
 
-In `android/app/build.gradle`, make the following changes.
+This step is only needed in version 1.0.0.  As of April 5, 2023, do not add the local
+`aar` file to the dependencies if you cloned from the main branch.
+
+In `android/app/build.gradle`, make the following changes (only if used v1.0.0)
 
 ```groovy
 if (flutterRoot == null) {
@@ -57,6 +60,8 @@ defaultConfig {
     minSdkVersion 26
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // only add the line below on v.1.0.0.  As of April 2023, it is not needed on the 
+    // main branch
     implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')    
 }    
 ```

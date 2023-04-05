@@ -234,7 +234,7 @@ After pressing take picture, the live preview will appear.
 
 ## Troubleshooting
 
-### Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android)
+### Failed resolution of: Lcom/ricoh360/thetaclient/ThetaRepository; (Flutter, Android) when using theta-client version 1.0.0
 
 In `flutter_project_root/android/app/build.gradle`, specify `theta-client-debug.aar`
 in the dependencies.
@@ -243,7 +243,26 @@ in the dependencies.
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')
+}
+```
 
+As of April 2023, do not add add the line
+
+```groovy
+// line below is not needed as of April 2023.
+ implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')
+```
+
+In `demo-flutter/android/build.gradle`, add the line
+`mavenLocal()`
+
+```groovy
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+    }
 }
 ```
 
