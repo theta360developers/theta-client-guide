@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # React Native RICOH THETA Demo Installation Guide for Windows
 
 ![react-windows-header](images/react_native/windows/reactwindows.svg)

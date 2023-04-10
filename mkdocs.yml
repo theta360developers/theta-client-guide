@@ -1,6 +1,7 @@
 site_name: theta-client guide
 site_description: RICOH THETA Web API and mobile development
 site_url: https://theta360developers.github.io/theta-client-guide/
+repo_url: https://github.com/theta360developers/theta-client-guide
 nav:
   - Home: index.md
   - Android: android.md
@@ -22,13 +23,29 @@ extra:
 theme:
   name: material
   palette:
-    primary: 'light green'
-    accent: 'lime'
+    # Palette toggle for light mode
+    - scheme: default
+      primary: 'light green'
+      accent: 'lime'
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for light mode
+    - scheme: slate
+      primary: 'light green'
+      accent: 'lime'
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
   logo: images/icon/green-logo-192x192.png
   favicon: images/icon/favicon-16x16.png
+  icon:
+    edit: material/pencil-plus
   features:
     - content.code.copy
     - navigation.expand
+    - content.action.edit
+  custom_dir: overrides
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -39,6 +56,8 @@ markdown_extensions:
   - pymdownx.superfences
   - attr_list
   - md_in_html
+edit_uri: edit/main/docs/
+
 # plugins:
 #   - social
 
