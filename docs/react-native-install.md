@@ -187,5 +187,3 @@ Now that we've sucesfully installed the required tools and setup. In the directo
  Error | Solution                              |
 | ----------- | ------------------------------------ |
 | SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable         | [Fix for Gradle Build Failure](#steps-to-fix-for-gradle-build-failure)  |
-| Error 2         | Solution |
-| Error 3          | Solution |
