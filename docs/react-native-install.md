@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # React Native RICOH THETA Demo Installation Guide for Windows
 
 ![react-windows-header](images/react_native/windows/reactwindows.svg)
@@ -42,13 +46,13 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 
 * [Android Studio](https://developer.android.com/studio)
 
-    Needed for the SDK and [Emulator Setup](/docs/how-to-setup-android-emulator.md)
+    Needed for the SDK and [Emulator Setup](how-to-setup-android-emulator.md)
 
 * [Java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 
 * [Node JS](https://github.com/coreybutler/nvm-windows)
 
-  * Recommend to Install with NVM for Windows. Process is shown below in [Node JS Section](/docs/how-to-install-nodejs.md).
+  * Recommend to Install with NVM for Windows. Process is shown in the [Node JS Section](how-to-install-nodejs.md).
 
 ## Command Line Steps
 
@@ -58,7 +62,7 @@ with  `git clone https://github.com/ricohapi/theta-client.git`
 
 ![firstCommand](images/react_native/windows/gitCloneThetaClient.png)
 
-### Second Command -  Go into  **theta-client** directory
+### Second Command - Go into  **theta-client** directory
 
 with `cd theta-client`
 
@@ -70,7 +74,7 @@ with `./gradlew publishToMavenLocal podPublishXCFramework` but I have an Error, 
 
 ![thirdCommand](images/react_native/windows/gradleWPublishFail.png)
 
-## Steps to Fix for Build Failure
+## Steps to Fix for Gradle Build Failure
 
 1. Search for env
 
@@ -110,6 +114,8 @@ with the process shown above using the Windows Environment Variable Editor.
 Substitute the variable path for your local path to `theta-client`
 
 ![userVar](images/react_native/windows/userVariable.png)
+
+**Restart your terminal by closing and relaunching it**
 
 Check if it sucessfully set the variable with `echo $Env:THETA_CLIENT` it should return the path of the THETA_CLIENT variable if set correctly
 
@@ -152,15 +158,15 @@ Go into the `demo-react-native` folder as shown below from the root directory `t
 
 ![cdIntoDemo](images/react_native/windows/goIntodemo.png)
 
-Once you are in `theta-client\demos\demo-react-native` follow the next step
-
 ### Seventh command - run `yarn install`
 
+Once you are in `theta-client\demos\demo-react-native` run the following command `yarn install`
+
+Note 1: **May need to run Powershell in administrator mode if command isn't working**
+
+Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in the [Node.js  section](how-to-install-nodejs.md)
+
 if you dont have yarn downloaded on your computer already then you need to get it by running `npm install --global yarn`
-
-Note 1: May need to run Powershell in administrator mode if command isn't working
-
-Note 2: May need to Install `Node.js` if your `npm` command isn't working which is shown in the [Node.js  section](/docs/how-to-install-nodejs.md)
 
 ![errorYarn](images/react_native/windows/yarninstallerror.png)
 
@@ -170,8 +176,14 @@ Note 2: May need to Install `Node.js` if your `npm` command isn't working which 
 
 ## Time to Run the Demo on Android
 
-Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator. Process shown in this [Android Emulator Section](/docs/how-to-setup-android-emulator.md) to setup this emulator before running this command.
+Now that we've sucesfully installed the required tools and setup. In the directory of `theta-client\demos\demo-react-native` use the command `yarn run android` to start your app in an Android emulator. Process shown in this [Android Emulator Section](how-to-setup-android-emulator.md) to setup this emulator before running this command.
 
 ![yarnRunAndroid](images/react_native/windows/yarnrunandroid.png)
 
 ![androidEmulator](images/react_native/windows/androidemulator.png)
+
+## Possible Error's During Guide
+
+ Error | Solution                              |
+| ----------- | ------------------------------------ |
+| SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable         | [Fix for Gradle Build Failure](#steps-to-fix-for-gradle-build-failure)  |
