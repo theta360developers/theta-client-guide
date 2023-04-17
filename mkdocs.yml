@@ -58,6 +58,8 @@ markdown_extensions:
   - md_in_html
 edit_uri: edit/main/docs/
 
-# plugins:
-#   - social
+plugins:
+  - glightbox
+  - search
+  # - social
 
