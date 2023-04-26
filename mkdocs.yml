@@ -15,6 +15,7 @@ nav:
   - Camera Comparison: 'camera_compare.md'
   - Image Compression: 'compression.md'
   - Verify Images: 'verify_image.md'
+  - THETA Simulator: 'fake-theta/overview.md'
 
 extra:
   analytics: 
