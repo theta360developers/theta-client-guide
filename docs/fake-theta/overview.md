@@ -102,8 +102,46 @@ The API endpoint for the Oppkey API simulation server is: [https://fake-theta-al
 If you use an API tester such as Insomnia or Postman, you can easily
 click on the URL to see the files.
 
-![fake-theta list files](../../images/fake_server/fake-server-list-files.png)
+![fake-theta list files](../images/fake_theta/fake-server-list-files.png)
 
 The images are approximately 11MB.  There are no thumbnails.
 
-![show image](../../images/fake_server/show_image.png)
+![show image](../images/fake_theta/show_image.png)
+
+
+## Using theta-client with fake-theta
+
+![minimal theta-client](../images/fake_theta/minimal-theta-client.png)
+
+1. specify endpoint   `final String endpoint = 'https://fake-theta-alpha.vercel.app';`
+2. initial `ThetaClientFlutter()` with the endpoint `await _thetaClient.initialize(endpoint);`
+
+```dart
+class MiniApp extends StatefulWidget {
+  const MiniApp({Key? key}) : super(key: key);
+
+  @override
+  State<MiniApp> createState() => _MiniAppState();
+}
+
+class _MiniAppState extends State<MiniApp> {
+  final _thetaClient = ThetaClientFlutter();
+  String _mobilePlatform = 'device unknown';
+  String _cameraInfo = 'unable to get camera info';
+  // real camera
+  // final String endpoint = 'http://192.168.1.1:80/';
+  // Oppkey fake camera
+  final String endpoint = 'https://fake-theta-alpha.vercel.app';
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeTheta();
+  }
+
+  void _initializeTheta() async {
+    try {
+      var mobilePlatform = await _thetaClient.getPlatformVersion();
+      await _thetaClient.initialize(endpoint);
+      var thetaInfo = await _thetaClient.getThetaInfo();
+```
