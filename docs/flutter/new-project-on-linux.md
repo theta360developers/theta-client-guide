@@ -1,6 +1,15 @@
 # New Flutter Android Project on Linux
 
-Using theta-client v1.0.0.
+## Overview
+
+1. `flutter create --platforms=android -a kotlin project_name`
+2. in `theta-client/flutter`, copy `android`, `lib`, `pubspec.yaml` into
+`project_name/theta_client_flutter`
+3. in `theta-client/kotlin-multiplatform/build/outputs`, copy `*.aar` into
+`project_name/packages/theta_client_flutter/android/aar`
+4. in `pubspec.yaml`, under `dependencies`, add `theta_client_flutter`
+5. in `android/app/build.gradle`, set minSdkVersion to 26
+6. in `android/build.gradle`, add `mavenLocal()` under `repositories`
 
 ## create new project
 
@@ -18,11 +27,9 @@ mkdir packages/theta_client_flutter
 
 ## add theta-client to android
 
-In `packages/theta_client_flutter/android/aar`, copy the `.aar` files
-that were built in the theta-client package build step.
-
-The aar files are in
-`theta-client/kotlin-multiplatform/build/outputs`
+Copy the `.aar` files `theta-client/kotlin-multiplatform/build/outputs`
+that were built in the theta-client package build step into
+`packages/theta_client_flutter/android/aar`.
 
 ![copy aar files](../images/flutter/linux/copy_aar.png)
 
@@ -42,12 +49,11 @@ dependencies:
     path: ./packages/theta_client_flutter
 ```
 
-## configure Android build
+## configure `android/app/build.gradle`
 
-This step is only needed in version 1.0.0.  As of April 5, 2023, do not add the local
-`aar` file to the dependencies if you cloned from the main branch.
+With theta-client version from April 27, 2023.
 
-In `android/app/build.gradle`, make the following changes (only if used v1.0.0)
+In `android/app/build.gradle`, make the following changes.
 
 ```groovy
 if (flutterRoot == null) {
@@ -58,12 +64,19 @@ if (flutterRoot == null) {
 defaultConfig {
     applicationId "com.oppkey.theta_mini"
     minSdkVersion 26
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    // only add the line below on v.1.0.0.  As of April 2023, it is not needed on the 
-    // main branch
-    implementation files('../../packages/theta_client_flutter/android/aar/theta-client-debug.aar')    
 }    
+```
+
+### add mavenLocal to `android/build.gradle`
+
+```groovy
+allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+    }
+}
 ```
 
 ## Test Flutter App
