@@ -9,13 +9,16 @@ Full code on  [GitHub ricohapi/theta-client](https://github.com/ricohapi/theta-c
 For native Android and iOS
 
 1. Build `theta-client` first
-2. Copy `aar` file you built in the previous step into Android project
+    1. `./gradlew publishToMavenLocal`
+    1. MacOS: `./gradlew podPublishXCFramework`
+2. Copy `aar` files you built in the previous step into Android project
+    1. from `./kotlin-multiplatform/build/outputs/aar`
+    1. to `demos\demo-android\app\libs`
 3. Copy `XCFramework` into iOS project
 4. In `./demo/demo-android` build Android demo
 5. In `./demo/demo-ios` build iOS demo
 
 * [demo-android full build process video walkthrough](https://youtu.be/l8X6amOmHXI)
-
 
 ## Overview
 
@@ -42,7 +45,6 @@ Refer to theta-client documentation for the development platform you are using.
 In addition to documentation on theta-client, you can refer to the
 RICOH official [Web API 2.1 documentation](https://github.com/ricohapi/theta-api-specs/tree/main/theta-web-api-v2.1).
 
-
 ## Community Tips
 
 ### cannot find ANDROID_HOME (Android)
@@ -62,9 +64,8 @@ After you build theta-client, make sure that you copied
 
 ### React Native: run pod install in ios folder
 
-For React Native, you may need to run `pod install` in the ios 
+For React Native, you may need to run `pod install` in the ios
 folder inside of demo-react-native
-
 
 ### minSdkVersion (Android)
 
@@ -75,6 +76,4 @@ In `android/app/build.gradle`, set to `minSdkVersion 26`
 
 ## Getting Help
 
-Open an [issue on GitHub](https://github.com/ricohapi/theta-client/issues). 
-
-
+Open an [issue on GitHub](https://github.com/ricohapi/theta-client/issues).

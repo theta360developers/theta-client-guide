@@ -108,7 +108,6 @@ The images are approximately 11MB.  There are no thumbnails.
 
 ![show image](../images/fake_theta/show_image.png)
 
-
 ## Using theta-client with fake-theta
 
 ![minimal theta-client](../images/fake_theta/minimal-theta-client.png)
@@ -145,3 +144,48 @@ class _MiniAppState extends State<MiniApp> {
       await _thetaClient.initialize(endpoint);
       var thetaInfo = await _thetaClient.getThetaInfo();
 ```
+
+### Compatibility between theta-client and fake-theta
+
+As of April 28, 2023, there are several problems using theta-client
+and fake-theta.  As a workaround, you can use standard http commands
+and parse the response yourself.
+
+Here is an example of using the http package in Flutter.
+
+```dart
+TextButton(
+  onPressed: () async {
+    // var imageList =
+    //     await _thetaClient.listFiles(FileTypeEnum.image, 2);
+    var url = Uri.parse('$endpoint/osc/commands/execute');
+
+    var bodyMap = {
+      'name': 'camera.listFiles',
+      'parameters': {
+        'fileType': 'image',
+        'startPosition': 0,
+        'entryCount': 1,
+        'maxThumbSize': 0,
+        '_detail': true,
+      }
+    };
+    var bodyJson = jsonEncode(bodyMap);
+    var response = await http.post(url,
+        headers: {'Content-Type': 'application/json'},
+        body: bodyJson);
+    var imageUrl = jsonDecode(response.body)['results']
+        ['entries'][0]['fileUrl'];
+
+    setState(() {
+      displayWidget = SingleChildScrollView(
+        // child: Text(imageUrl.toString()),
+        child: Image.network(imageUrl),
+      );
+    });
+  },
+  child: const Text('thumbs'),
+),
+```
+
+![fake client image](../images/fake_theta/demo-fake-theta-image.png)

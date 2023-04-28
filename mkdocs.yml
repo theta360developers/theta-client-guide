@@ -7,7 +7,7 @@ nav:
   - Android: android.md
   - Flutter: 
       - 'Flutter Demo': 'flutter.md'
-      - 'Build on Linux': 'flutter/new-project-on-linux.md'
+      - 'New Project': 'flutter/new-project-on-linux.md'
   - React Native: 
       - 'React Native Install': 'react-native-install.md'
       - 'How to Install Node.js': 'how-to-install-nodejs.md'
