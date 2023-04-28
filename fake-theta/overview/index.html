@@ -174,7 +174,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../flutter/new-project-on-linux/">
-        Build on Linux
+        New Project
       </a>
 </li>
 </ul>
@@ -292,6 +292,15 @@
 <a class="md-nav__link" href="#using-theta-client-with-fake-theta">
     Using theta-client with fake-theta
   </a>
+<nav aria-label="Using theta-client with fake-theta" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compatibility-between-theta-client-and-fake-theta">
+    Compatibility between theta-client and fake-theta
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -362,6 +371,15 @@
 <a class="md-nav__link" href="#using-theta-client-with-fake-theta">
     Using theta-client with fake-theta
   </a>
+<nav aria-label="Using theta-client with fake-theta" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compatibility-between-theta-client-and-fake-theta">
+    Compatibility between theta-client and fake-theta
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -482,6 +500,45 @@ click on the URL to see the files.</p>
 </span><span id="__span-7-26"><a href="#__codelineno-7-26" id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">      </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">endpoint</span><span class="p">);</span>
 </span><span id="__span-7-27"><a href="#__codelineno-7-27" id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">thetaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getThetaInfo</span><span class="p">();</span>
 </span></code></pre></div>
+<h3 id="compatibility-between-theta-client-and-fake-theta">Compatibility between theta-client and fake-theta</h3>
+<p>As of April 28, 2023, there are several problems using theta-client
+and fake-theta.  As a workaround, you can use standard http commands
+and parse the response yourself.</p>
+<p>Here is an example of using the http package in Flutter.</p>
+<div class="language-dart highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">TextButton</span><span class="p">(</span>
+</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="nl">onPressed:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="c1">// var imageList =</span>
+</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="c1">//     await _thetaClient.listFiles(FileTypeEnum.image, 2);</span>
+</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Uri</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">'</span><span class="si">$</span><span class="n">endpoint</span><span class="s1">/osc/commands/execute'</span><span class="p">);</span>
+</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">bodyMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">      </span><span class="s1">'name'</span><span class="o">:</span><span class="w"> </span><span class="s1">'camera.listFiles'</span><span class="p">,</span>
+</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">      </span><span class="s1">'parameters'</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-10"><a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="s1">'fileType'</span><span class="o">:</span><span class="w"> </span><span class="s1">'image'</span><span class="p">,</span>
+</span><span id="__span-8-11"><a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="s1">'startPosition'</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+</span><span id="__span-8-12"><a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="s1">'entryCount'</span><span class="o">:</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
+</span><span id="__span-8-13"><a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="s1">'maxThumbSize'</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
+</span><span id="__span-8-14"><a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="s1">'_detail'</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-8-15"><a href="#__codelineno-8-15" id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">      </span><span class="p">}</span>
+</span><span id="__span-8-16"><a href="#__codelineno-8-16" id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-8-17"><a href="#__codelineno-8-17" id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">bodyJson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonEncode</span><span class="p">(</span><span class="n">bodyMap</span><span class="p">);</span>
+</span><span id="__span-8-18"><a href="#__codelineno-8-18" id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span>
+</span><span id="__span-8-19"><a href="#__codelineno-8-19" id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="nl">headers:</span><span class="w"> </span><span class="p">{</span><span class="s1">'Content-Type'</span><span class="o">:</span><span class="w"> </span><span class="s1">'application/json'</span><span class="p">},</span>
+</span><span id="__span-8-20"><a href="#__codelineno-8-20" id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">        </span><span class="nl">body:</span><span class="w"> </span><span class="n">bodyJson</span><span class="p">);</span>
+</span><span id="__span-8-21"><a href="#__codelineno-8-21" id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">imageUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonDecode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">)[</span><span class="s1">'results'</span><span class="p">]</span>
+</span><span id="__span-8-22"><a href="#__codelineno-8-22" id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="p">[</span><span class="s1">'entries'</span><span class="p">][</span><span class="m">0</span><span class="p">][</span><span class="s1">'fileUrl'</span><span class="p">];</span>
+</span><span id="__span-8-23"><a href="#__codelineno-8-23" id="__codelineno-8-23" name="__codelineno-8-23"></a>
+</span><span id="__span-8-24"><a href="#__codelineno-8-24" id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">    </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-25"><a href="#__codelineno-8-25" id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">      </span><span class="n">displayWidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingleChildScrollView</span><span class="p">(</span>
+</span><span id="__span-8-26"><a href="#__codelineno-8-26" id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="c1">// child: Text(imageUrl.toString()),</span>
+</span><span id="__span-8-27"><a href="#__codelineno-8-27" id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">        </span><span class="nl">child:</span><span class="w"> </span><span class="n">Image</span><span class="p">.</span><span class="n">network</span><span class="p">(</span><span class="n">imageUrl</span><span class="p">),</span>
+</span><span id="__span-8-28"><a href="#__codelineno-8-28" id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">      </span><span class="p">);</span>
+</span><span id="__span-8-29"><a href="#__codelineno-8-29" id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="p">});</span>
+</span><span id="__span-8-30"><a href="#__codelineno-8-30" id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-8-31"><a href="#__codelineno-8-31" id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">  </span><span class="nl">child:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s1">'thumbs'</span><span class="p">),</span>
+</span><span id="__span-8-32"><a href="#__codelineno-8-32" id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="p">),</span>
+</span></code></pre></div>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/fake_theta/demo-fake-theta-image.png"><img alt="fake client image" src="../../images/fake_theta/demo-fake-theta-image.png"/></a></p>
 </article>
 </div>
 </div>

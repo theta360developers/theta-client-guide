@@ -11,7 +11,7 @@
 <link href="../../react-native-install/" rel="next"/>
 <link href="../../images/icon/favicon-16x16.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.0" name="generator"/>
-<title>Build on Linux - theta-client guide</title>
+<title>New Project - theta-client guide</title>
 <link href="../../assets/stylesheets/main.402914a4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Build on Linux
+              New Project
             
           </span>
 </div>
@@ -176,11 +176,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Build on Linux
+          New Project
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Build on Linux
+        New Project
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -188,6 +188,11 @@
       Table of contents
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#create-new-project">
     create new project
@@ -209,9 +214,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configure-android-build">
-    configure Android build
+<a class="md-nav__link" href="#configure-androidappbuildgradle">
+    configure android/app/build.gradle
   </a>
+<nav aria-label="configure android/app/build.gradle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-mavenlocal-to-androidbuildgradle">
+    add mavenLocal to android/build.gradle
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#test-flutter-app">
@@ -299,6 +313,11 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
+<a class="md-nav__link" href="#overview">
+    Overview
+  </a>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="#create-new-project">
     create new project
   </a>
@@ -319,9 +338,18 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#configure-android-build">
-    configure Android build
+<a class="md-nav__link" href="#configure-androidappbuildgradle">
+    configure android/app/build.gradle
   </a>
+<nav aria-label="configure android/app/build.gradle" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#add-mavenlocal-to-androidbuildgradle">
+    add mavenLocal to android/build.gradle
+  </a>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#test-flutter-app">
@@ -349,7 +377,17 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.7 7c.4-.4.4-1 0-1.4l-2.3-2.3c-.4-.4-1-.4-1.4 0l-1.8 1.8L19 8.9M3 17.2V21h3.8l11-11.1-3.7-3.8L3 17.2M7 2v3h3v2H7v3H5V7H2V5h3V2h2Z"></path></svg>
 </a>
 <h1 id="new-flutter-android-project-on-linux">New Flutter Android Project on Linux</h1>
-<p>Using theta-client v1.0.0.</p>
+<h2 id="overview">Overview</h2>
+<ol>
+<li><code>flutter create --platforms=android -a kotlin project_name</code></li>
+<li>in <code>theta-client/flutter</code>, copy <code>android</code>, <code>lib</code>, <code>pubspec.yaml</code> into
+<code>project_name/theta_client_flutter</code></li>
+<li>in <code>theta-client/kotlin-multiplatform/build/outputs</code>, copy <code>*.aar</code> into
+<code>project_name/packages/theta_client_flutter/android/aar</code></li>
+<li>in <code>pubspec.yaml</code>, under <code>dependencies</code>, add <code>theta_client_flutter</code></li>
+<li>in <code>android/app/build.gradle</code>, set minSdkVersion to 26</li>
+<li>in <code>android/build.gradle</code>, add <code>mavenLocal()</code> under <code>repositories</code></li>
+</ol>
 <h2 id="create-new-project">create new project</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>flutter create --platforms=android -a kotlin theta_mini
 </span><span id="__span-0-2"><a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>Creating project theta_mini...
@@ -360,10 +398,9 @@
 <h2 id="copy-theta-client-package">copy theta-client package</h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/flutter/linux/copy_flutter_plugin.png"><img alt="copy theta-client plugin" src="../../images/flutter/linux/copy_flutter_plugin.png"/></a></p>
 <h2 id="add-theta-client-to-android">add theta-client to android</h2>
-<p>In <code>packages/theta_client_flutter/android/aar</code>, copy the <code>.aar</code> files
-that were built in the theta-client package build step.</p>
-<p>The aar files are in
-<code>theta-client/kotlin-multiplatform/build/outputs</code></p>
+<p>Copy the <code>.aar</code> files <code>theta-client/kotlin-multiplatform/build/outputs</code>
+that were built in the theta-client package build step into
+<code>packages/theta_client_flutter/android/aar</code>.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/flutter/linux/copy_aar.png"><img alt="copy aar files" src="../../images/flutter/linux/copy_aar.png"/></a></p>
 <p>This is what the aar files look like in VS Code.</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/flutter/linux/aar_files.png"><img alt="aar files in theta-client" src="../../images/flutter/linux/aar_files.png"/></a></p>
@@ -375,10 +412,9 @@ that were built in the theta-client package build step.</p>
 </span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">theta_client_flutter</span><span class="p">:</span>
 </span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./packages/theta_client_flutter</span>
 </span></code></pre></div>
-<h2 id="configure-android-build">configure Android build</h2>
-<p>This step is only needed in version 1.0.0.  As of April 5, 2023, do not add the local
-<code>aar</code> file to the dependencies if you cloned from the main branch.</p>
-<p>In <code>android/app/build.gradle</code>, make the following changes (only if used v1.0.0)</p>
+<h2 id="configure-androidappbuildgradle">configure <code>android/app/build.gradle</code></h2>
+<p>With theta-client version from April 27, 2023.</p>
+<p>In <code>android/app/build.gradle</code>, make the following changes.</p>
 <div class="language-groovy highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="n">flutterRoot</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-2-2"><a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="o">(</span><span class="s2">"Flutter not found. Add flutter.sdk in local.properties."</span><span class="o">)</span>
 </span><span id="__span-2-3"><a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="o">}</span>
@@ -387,87 +423,91 @@ that were built in the theta-client package build step.</p>
 </span><span id="__span-2-6"><a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">defaultConfig</span><span class="w"> </span><span class="o">{</span>
 </span><span id="__span-2-7"><a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="n">applicationId</span><span class="w"> </span><span class="s2">"com.oppkey.theta_mini"</span>
 </span><span id="__span-2-8"><a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="n">minSdkVersion</span><span class="w"> </span><span class="mi">26</span>
-</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-</span><span id="__span-2-10"><a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"</span>
-</span><span id="__span-2-11"><a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="c1">// only add the line below on v.1.0.0.  As of April 2023, it is not needed on the </span>
-</span><span id="__span-2-12"><a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="c1">// main branch</span>
-</span><span id="__span-2-13"><a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="n">files</span><span class="o">(</span><span class="s1">'../../packages/theta_client_flutter/android/aar/theta-client-debug.aar'</span><span class="o">)</span><span class="w">    </span>
-</span><span id="__span-2-14"><a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="o">}</span><span class="w">    </span>
+</span><span id="__span-2-9"><a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="o">}</span><span class="w">    </span>
+</span></code></pre></div>
+<h3 id="add-mavenlocal-to-androidbuildgradle">add mavenLocal to <code>android/build.gradle</code></h3>
+<div class="language-groovy highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">allprojects</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="n">mavenLocal</span><span class="o">()</span>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">        </span><span class="n">google</span><span class="o">()</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">        </span><span class="n">mavenCentral</span><span class="o">()</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="o">}</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="o">}</span>
 </span></code></pre></div>
 <h2 id="test-flutter-app">Test Flutter App</h2>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/flutter/linux/android_minimal_screenshot.png"><img alt="android screenshot" src="../../images/flutter/linux/android_minimal_screenshot.png"/></a></p>
-<div class="language-dart highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">'package:flutter/material.dart'</span><span class="p">;</span>
-</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="s1">'package:theta_client_flutter/theta_client_flutter.dart'</span><span class="p">;</span>
-</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
-</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="n">runApp</span><span class="p">(</span>
-</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">MaterialApp</span><span class="p">(</span>
-</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">      </span><span class="nl">home:</span><span class="w"> </span><span class="n">Scaffold</span><span class="p">(</span>
-</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="nl">appBar:</span><span class="w"> </span><span class="n">AppBar</span><span class="p">(</span>
-</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">          </span><span class="nl">title:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s1">'theta-client minimal'</span><span class="p">),</span>
-</span><span id="__span-3-10"><a href="#__codelineno-3-10" id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="p">),</span>
-</span><span id="__span-3-11"><a href="#__codelineno-3-11" id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="nl">body:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">MiniApp</span><span class="p">(),</span>
-</span><span id="__span-3-12"><a href="#__codelineno-3-12" id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">      </span><span class="p">),</span>
-</span><span id="__span-3-13"><a href="#__codelineno-3-13" id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="p">),</span>
-</span><span id="__span-3-14"><a href="#__codelineno-3-14" id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="p">);</span>
-</span><span id="__span-3-15"><a href="#__codelineno-3-15" id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="p">}</span>
-</span><span id="__span-3-16"><a href="#__codelineno-3-16" id="__codelineno-3-16" name="__codelineno-3-16"></a>
-</span><span id="__span-3-17"><a href="#__codelineno-3-17" id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MiniApp</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">StatefulWidget</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-18"><a href="#__codelineno-3-18" id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">MiniApp</span><span class="p">({</span><span class="n">Key</span><span class="o">?</span><span class="w"> </span><span class="n">key</span><span class="p">})</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">super</span><span class="p">(</span><span class="nl">key:</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
-</span><span id="__span-3-19"><a href="#__codelineno-3-19" id="__codelineno-3-19" name="__codelineno-3-19"></a>
-</span><span id="__span-3-20"><a href="#__codelineno-3-20" id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">  </span><span class="nd">@override</span>
-</span><span id="__span-3-21"><a href="#__codelineno-3-21" id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">  </span><span class="n">State</span><span class="o">&lt;</span><span class="n">MiniApp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">createState</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_MiniAppState</span><span class="p">();</span>
-</span><span id="__span-3-22"><a href="#__codelineno-3-22" id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="p">}</span>
-</span><span id="__span-3-23"><a href="#__codelineno-3-23" id="__codelineno-3-23" name="__codelineno-3-23"></a>
-</span><span id="__span-3-24"><a href="#__codelineno-3-24" id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="kd">class</span><span class="w"> </span><span class="nc">_MiniAppState</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">MiniApp</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-25"><a href="#__codelineno-3-25" id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">_thetaClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThetaClientFlutter</span><span class="p">();</span>
-</span><span id="__span-3-26"><a href="#__codelineno-3-26" id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">  </span><span class="kt">String</span><span class="w"> </span><span class="n">_mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'device unknown'</span><span class="p">;</span>
-</span><span id="__span-3-27"><a href="#__codelineno-3-27" id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">  </span><span class="kt">String</span><span class="w"> </span><span class="n">_cameraInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'unable to get camera info'</span><span class="p">;</span>
-</span><span id="__span-3-28"><a href="#__codelineno-3-28" id="__codelineno-3-28" name="__codelineno-3-28"></a>
-</span><span id="__span-3-29"><a href="#__codelineno-3-29" id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">  </span><span class="nd">@override</span>
-</span><span id="__span-3-30"><a href="#__codelineno-3-30" id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">initState</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-31"><a href="#__codelineno-3-31" id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="n">initState</span><span class="p">();</span>
-</span><span id="__span-3-32"><a href="#__codelineno-3-32" id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">    </span><span class="n">_initializeTheta</span><span class="p">();</span>
-</span><span id="__span-3-33"><a href="#__codelineno-3-33" id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-3-34"><a href="#__codelineno-3-34" id="__codelineno-3-34" name="__codelineno-3-34"></a>
-</span><span id="__span-3-35"><a href="#__codelineno-3-35" id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_initializeTheta</span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-36"><a href="#__codelineno-3-36" id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-37"><a href="#__codelineno-3-37" id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getPlatformVersion</span><span class="p">();</span>
-</span><span id="__span-3-38"><a href="#__codelineno-3-38" id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">      </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
-</span><span id="__span-3-39"><a href="#__codelineno-3-39" id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">thetaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getThetaInfo</span><span class="p">();</span>
-</span><span id="__span-3-40"><a href="#__codelineno-3-40" id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">      </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-41"><a href="#__codelineno-3-41" id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">        </span><span class="n">_mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mobilePlatform</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">'device unknown'</span><span class="p">;</span>
-</span><span id="__span-3-42"><a href="#__codelineno-3-42" id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">        </span><span class="n">_cameraInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'</span><span class="si">${</span><span class="n">thetaInfo</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s1">, FW </span><span class="si">${</span><span class="n">thetaInfo</span><span class="p">.</span><span class="n">firmwareVersion</span><span class="si">}</span><span class="s1">,'</span>
-</span><span id="__span-3-43"><a href="#__codelineno-3-43" id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">            </span><span class="s1">'SN: </span><span class="si">${</span><span class="n">thetaInfo</span><span class="p">.</span><span class="n">serialNumber</span><span class="si">}</span><span class="s1">'</span><span class="p">;</span>
-</span><span id="__span-3-44"><a href="#__codelineno-3-44" id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">      </span><span class="p">});</span>
-</span><span id="__span-3-45"><a href="#__codelineno-3-45" id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-46"><a href="#__codelineno-3-46" id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">      </span><span class="n">debugPrint</span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">toString</span><span class="p">());</span>
-</span><span id="__span-3-47"><a href="#__codelineno-3-47" id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">    </span><span class="p">}</span>
-</span><span id="__span-3-48"><a href="#__codelineno-3-48" id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-3-49"><a href="#__codelineno-3-49" id="__codelineno-3-49" name="__codelineno-3-49"></a>
-</span><span id="__span-3-50"><a href="#__codelineno-3-50" id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">  </span><span class="nd">@override</span>
-</span><span id="__span-3-51"><a href="#__codelineno-3-51" id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="w">  </span><span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-3-52"><a href="#__codelineno-3-52" id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Padding</span><span class="p">(</span>
-</span><span id="__span-3-53"><a href="#__codelineno-3-53" id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">      </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">20.0</span><span class="p">),</span>
-</span><span id="__span-3-54"><a href="#__codelineno-3-54" id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">      </span><span class="nl">child:</span><span class="w"> </span><span class="n">Column</span><span class="p">(</span>
-</span><span id="__span-3-55"><a href="#__codelineno-3-55" id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">        </span><span class="nl">mainAxisAlignment:</span><span class="w"> </span><span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">start</span><span class="p">,</span>
-</span><span id="__span-3-56"><a href="#__codelineno-3-56" id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">        </span><span class="nl">children:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-3-57"><a href="#__codelineno-3-57" id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">          </span><span class="n">Text</span><span class="p">(</span>
-</span><span id="__span-3-58"><a href="#__codelineno-3-58" id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">            </span><span class="s1">'Mobile Platform: </span><span class="si">$</span><span class="n">_mobilePlatform</span><span class="s1">'</span><span class="p">,</span>
-</span><span id="__span-3-59"><a href="#__codelineno-3-59" id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="w">            </span><span class="nl">style:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span><span class="nl">fontSize:</span><span class="w"> </span><span class="m">36</span><span class="p">),</span>
-</span><span id="__span-3-60"><a href="#__codelineno-3-60" id="__codelineno-3-60" name="__codelineno-3-60"></a><span class="w">          </span><span class="p">),</span>
-</span><span id="__span-3-61"><a href="#__codelineno-3-61" id="__codelineno-3-61" name="__codelineno-3-61"></a><span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">SizedBox</span><span class="p">(</span>
-</span><span id="__span-3-62"><a href="#__codelineno-3-62" id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="w">            </span><span class="nl">height:</span><span class="w"> </span><span class="m">40.0</span><span class="p">,</span>
-</span><span id="__span-3-63"><a href="#__codelineno-3-63" id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="w">          </span><span class="p">),</span>
-</span><span id="__span-3-64"><a href="#__codelineno-3-64" id="__codelineno-3-64" name="__codelineno-3-64"></a><span class="w">          </span><span class="n">Text</span><span class="p">(</span>
-</span><span id="__span-3-65"><a href="#__codelineno-3-65" id="__codelineno-3-65" name="__codelineno-3-65"></a><span class="w">            </span><span class="n">_cameraInfo</span><span class="p">,</span>
-</span><span id="__span-3-66"><a href="#__codelineno-3-66" id="__codelineno-3-66" name="__codelineno-3-66"></a><span class="w">            </span><span class="nl">style:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span><span class="nl">fontSize:</span><span class="w"> </span><span class="m">36</span><span class="p">),</span>
-</span><span id="__span-3-67"><a href="#__codelineno-3-67" id="__codelineno-3-67" name="__codelineno-3-67"></a><span class="w">          </span><span class="p">)</span>
-</span><span id="__span-3-68"><a href="#__codelineno-3-68" id="__codelineno-3-68" name="__codelineno-3-68"></a><span class="w">        </span><span class="p">],</span>
-</span><span id="__span-3-69"><a href="#__codelineno-3-69" id="__codelineno-3-69" name="__codelineno-3-69"></a><span class="w">      </span><span class="p">),</span>
-</span><span id="__span-3-70"><a href="#__codelineno-3-70" id="__codelineno-3-70" name="__codelineno-3-70"></a><span class="w">    </span><span class="p">);</span>
-</span><span id="__span-3-71"><a href="#__codelineno-3-71" id="__codelineno-3-71" name="__codelineno-3-71"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-3-72"><a href="#__codelineno-3-72" id="__codelineno-3-72" name="__codelineno-3-72"></a><span class="p">}</span>
+<div class="language-dart highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="s1">'package:flutter/material.dart'</span><span class="p">;</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">import</span><span class="w"> </span><span class="s1">'package:theta_client_flutter/theta_client_flutter.dart'</span><span class="p">;</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kt">void</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="n">runApp</span><span class="p">(</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="n">MaterialApp</span><span class="p">(</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">      </span><span class="nl">home:</span><span class="w"> </span><span class="n">Scaffold</span><span class="p">(</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">        </span><span class="nl">appBar:</span><span class="w"> </span><span class="n">AppBar</span><span class="p">(</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">          </span><span class="nl">title:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s1">'theta-client minimal'</span><span class="p">),</span>
+</span><span id="__span-4-10"><a href="#__codelineno-4-10" id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="p">),</span>
+</span><span id="__span-4-11"><a href="#__codelineno-4-11" id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">        </span><span class="nl">body:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">MiniApp</span><span class="p">(),</span>
+</span><span id="__span-4-12"><a href="#__codelineno-4-12" id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">      </span><span class="p">),</span>
+</span><span id="__span-4-13"><a href="#__codelineno-4-13" id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="p">),</span>
+</span><span id="__span-4-14"><a href="#__codelineno-4-14" id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">  </span><span class="p">);</span>
+</span><span id="__span-4-15"><a href="#__codelineno-4-15" id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="p">}</span>
+</span><span id="__span-4-16"><a href="#__codelineno-4-16" id="__codelineno-4-16" name="__codelineno-4-16"></a>
+</span><span id="__span-4-17"><a href="#__codelineno-4-17" id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MiniApp</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">StatefulWidget</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-18"><a href="#__codelineno-4-18" id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">MiniApp</span><span class="p">({</span><span class="n">Key</span><span class="o">?</span><span class="w"> </span><span class="n">key</span><span class="p">})</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">super</span><span class="p">(</span><span class="nl">key:</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
+</span><span id="__span-4-19"><a href="#__codelineno-4-19" id="__codelineno-4-19" name="__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a href="#__codelineno-4-20" id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">  </span><span class="nd">@override</span>
+</span><span id="__span-4-21"><a href="#__codelineno-4-21" id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">  </span><span class="n">State</span><span class="o">&lt;</span><span class="n">MiniApp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">createState</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_MiniAppState</span><span class="p">();</span>
+</span><span id="__span-4-22"><a href="#__codelineno-4-22" id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="p">}</span>
+</span><span id="__span-4-23"><a href="#__codelineno-4-23" id="__codelineno-4-23" name="__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a href="#__codelineno-4-24" id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="kd">class</span><span class="w"> </span><span class="nc">_MiniAppState</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">MiniApp</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-25"><a href="#__codelineno-4-25" id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">_thetaClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThetaClientFlutter</span><span class="p">();</span>
+</span><span id="__span-4-26"><a href="#__codelineno-4-26" id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">  </span><span class="kt">String</span><span class="w"> </span><span class="n">_mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'device unknown'</span><span class="p">;</span>
+</span><span id="__span-4-27"><a href="#__codelineno-4-27" id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">  </span><span class="kt">String</span><span class="w"> </span><span class="n">_cameraInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'unable to get camera info'</span><span class="p">;</span>
+</span><span id="__span-4-28"><a href="#__codelineno-4-28" id="__codelineno-4-28" name="__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a href="#__codelineno-4-29" id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="w">  </span><span class="nd">@override</span>
+</span><span id="__span-4-30"><a href="#__codelineno-4-30" id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">initState</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-31"><a href="#__codelineno-4-31" id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="n">initState</span><span class="p">();</span>
+</span><span id="__span-4-32"><a href="#__codelineno-4-32" id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">    </span><span class="n">_initializeTheta</span><span class="p">();</span>
+</span><span id="__span-4-33"><a href="#__codelineno-4-33" id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-34"><a href="#__codelineno-4-34" id="__codelineno-4-34" name="__codelineno-4-34"></a>
+</span><span id="__span-4-35"><a href="#__codelineno-4-35" id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_initializeTheta</span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-36"><a href="#__codelineno-4-36" id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-37"><a href="#__codelineno-4-37" id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getPlatformVersion</span><span class="p">();</span>
+</span><span id="__span-4-38"><a href="#__codelineno-4-38" id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">      </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">initialize</span><span class="p">();</span>
+</span><span id="__span-4-39"><a href="#__codelineno-4-39" id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">thetaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getThetaInfo</span><span class="p">();</span>
+</span><span id="__span-4-40"><a href="#__codelineno-4-40" id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">      </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-41"><a href="#__codelineno-4-41" id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">        </span><span class="n">_mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mobilePlatform</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s1">'device unknown'</span><span class="p">;</span>
+</span><span id="__span-4-42"><a href="#__codelineno-4-42" id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">        </span><span class="n">_cameraInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'</span><span class="si">${</span><span class="n">thetaInfo</span><span class="p">.</span><span class="n">model</span><span class="si">}</span><span class="s1">, FW </span><span class="si">${</span><span class="n">thetaInfo</span><span class="p">.</span><span class="n">firmwareVersion</span><span class="si">}</span><span class="s1">,'</span>
+</span><span id="__span-4-43"><a href="#__codelineno-4-43" id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">            </span><span class="s1">'SN: </span><span class="si">${</span><span class="n">thetaInfo</span><span class="p">.</span><span class="n">serialNumber</span><span class="si">}</span><span class="s1">'</span><span class="p">;</span>
+</span><span id="__span-4-44"><a href="#__codelineno-4-44" id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">      </span><span class="p">});</span>
+</span><span id="__span-4-45"><a href="#__codelineno-4-45" id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-46"><a href="#__codelineno-4-46" id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">      </span><span class="n">debugPrint</span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">toString</span><span class="p">());</span>
+</span><span id="__span-4-47"><a href="#__codelineno-4-47" id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-48"><a href="#__codelineno-4-48" id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-49"><a href="#__codelineno-4-49" id="__codelineno-4-49" name="__codelineno-4-49"></a>
+</span><span id="__span-4-50"><a href="#__codelineno-4-50" id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">  </span><span class="nd">@override</span>
+</span><span id="__span-4-51"><a href="#__codelineno-4-51" id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="w">  </span><span class="n">Widget</span><span class="w"> </span><span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-52"><a href="#__codelineno-4-52" id="__codelineno-4-52" name="__codelineno-4-52"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Padding</span><span class="p">(</span>
+</span><span id="__span-4-53"><a href="#__codelineno-4-53" id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="w">      </span><span class="nl">padding:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">EdgeInsets</span><span class="p">.</span><span class="n">all</span><span class="p">(</span><span class="m">20.0</span><span class="p">),</span>
+</span><span id="__span-4-54"><a href="#__codelineno-4-54" id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">      </span><span class="nl">child:</span><span class="w"> </span><span class="n">Column</span><span class="p">(</span>
+</span><span id="__span-4-55"><a href="#__codelineno-4-55" id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">        </span><span class="nl">mainAxisAlignment:</span><span class="w"> </span><span class="n">MainAxisAlignment</span><span class="p">.</span><span class="n">start</span><span class="p">,</span>
+</span><span id="__span-4-56"><a href="#__codelineno-4-56" id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">        </span><span class="nl">children:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-4-57"><a href="#__codelineno-4-57" id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">          </span><span class="n">Text</span><span class="p">(</span>
+</span><span id="__span-4-58"><a href="#__codelineno-4-58" id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">            </span><span class="s1">'Mobile Platform: </span><span class="si">$</span><span class="n">_mobilePlatform</span><span class="s1">'</span><span class="p">,</span>
+</span><span id="__span-4-59"><a href="#__codelineno-4-59" id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">            </span><span class="nl">style:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span><span class="nl">fontSize:</span><span class="w"> </span><span class="m">36</span><span class="p">),</span>
+</span><span id="__span-4-60"><a href="#__codelineno-4-60" id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">          </span><span class="p">),</span>
+</span><span id="__span-4-61"><a href="#__codelineno-4-61" id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">          </span><span class="k">const</span><span class="w"> </span><span class="n">SizedBox</span><span class="p">(</span>
+</span><span id="__span-4-62"><a href="#__codelineno-4-62" id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">            </span><span class="nl">height:</span><span class="w"> </span><span class="m">40.0</span><span class="p">,</span>
+</span><span id="__span-4-63"><a href="#__codelineno-4-63" id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">          </span><span class="p">),</span>
+</span><span id="__span-4-64"><a href="#__codelineno-4-64" id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">          </span><span class="n">Text</span><span class="p">(</span>
+</span><span id="__span-4-65"><a href="#__codelineno-4-65" id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">            </span><span class="n">_cameraInfo</span><span class="p">,</span>
+</span><span id="__span-4-66"><a href="#__codelineno-4-66" id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">            </span><span class="nl">style:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">TextStyle</span><span class="p">(</span><span class="nl">fontSize:</span><span class="w"> </span><span class="m">36</span><span class="p">),</span>
+</span><span id="__span-4-67"><a href="#__codelineno-4-67" id="__codelineno-4-67" name="__codelineno-4-67"></a><span class="w">          </span><span class="p">)</span>
+</span><span id="__span-4-68"><a href="#__codelineno-4-68" id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-4-69"><a href="#__codelineno-4-69" id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">      </span><span class="p">),</span>
+</span><span id="__span-4-70"><a href="#__codelineno-4-70" id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-4-71"><a href="#__codelineno-4-71" id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-72"><a href="#__codelineno-4-72" id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="example-code-for-minimal-project">Example Code for Minimal Project</h2>
 <ul>
@@ -476,15 +516,15 @@ that were built in the theta-client package build step.</p>
 <h2 id="troubleshooting">Troubleshooting</h2>
 <p>If the build fails, make sure you have the <code>aar</code> files accessible in
 <code>packages/theta_client_flutter/android/aar</code></p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>Launching lib/main.dart on sdk gphone64 x86 64 in debug mode...
-</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>main.dart:1
-</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a>FAILURE: Build failed with an exception.
-</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a>
-</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a>* What went wrong:
-</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a>Execution failed for task ':app:checkDebugAarMetadata'.
-</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a>&gt; Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
-</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a>   &gt; Failed to transform theta-client-debug.aar to match attributes {artifactType=android-aar-metadata}.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a>Launching lib/main.dart on sdk gphone64 x86 64 in debug mode...
+</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a>main.dart:1
+</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>FAILURE: Build failed with an exception.
+</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a>* What went wrong:
+</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a>Execution failed for task ':app:checkDebugAarMetadata'.
+</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>&gt; Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+</span><span id="__span-5-9"><a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a>   &gt; Failed to transform theta-client-debug.aar to match attributes {artifactType=android-aar-metadata}.
 </span></code></pre></div>
 </article>
 </div>
