@@ -40,7 +40,7 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 | RAM         | 16.0 GB |
 | OS          | Windows 11 Home |
 
-* THETA X running firmware 1.41.0
+RICOH THETA X running firmware 2.00.0
 
 ## Requirements
 
@@ -50,9 +50,7 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 
 * [Java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 
-* [Node JS](https://github.com/coreybutler/nvm-windows)
-
-  * Recommend to Install with NVM for Windows. Process is shown in the [Node JS Section](how-to-install-nodejs.md).
+* [Node JS](https://github.com/coreybutler/nvm-windows) recommend to Install with NVM for Windows. Process is shown in the [Node JS Section](how-to-install-nodejs.md).
 
 ## Command Line Steps
 

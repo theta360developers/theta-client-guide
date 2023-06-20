@@ -9,9 +9,10 @@ nav:
       - 'Flutter Demo': 'flutter.md'
       - 'New Project': 'flutter/new-project-on-linux.md'
   - React Native: 
-      - 'React Native Install': 'react-native-install.md'
+      - 'Installation and Setup': 'react-native-install.md'
       - 'How to Install Node.js': 'how-to-install-nodejs.md'
       - 'How to Install Android Emulator': 'how-to-setup-android-emulator.md'
+      - 'React Native Theta Client v1.2': 'react-native-theta-client-1_2.md'
   - Camera Comparison: 'camera_compare.md'
   - Image Compression: 'compression.md'
   - Verify Images: 'verify_image.md'

@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # How to Install Node.js on Windows
 
 1. Download the nvm-setup.exe in the link below
