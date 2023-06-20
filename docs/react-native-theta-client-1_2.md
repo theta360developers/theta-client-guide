@@ -15,4 +15,8 @@ yarn install
 yarn run android
 ```
 
-## 
+## Results
+
+| Main Menu | Take Photo   | List Files |
+| ----------- | ----------| ---------- |
+| ![screenshot1](images/react_native/windows/scrnshotAndroid1.png){ width="250"} | ![screenshot2](Screenshot_1687290803.png){ width="250"}  | ![screenshot3](Screenshot_1687290798.png){ width="250"}|
