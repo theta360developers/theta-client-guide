@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # React Native Theta Client v1.2 Walkthrough
 
 ## Overview
