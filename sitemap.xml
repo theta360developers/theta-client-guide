@@ -2,62 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/android/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/camera_compare/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/compression/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/flutter/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/how-to-install-nodejs/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/how-to-setup-android-emulator/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/react-native-install/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/react-native-mac/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://theta360developers.github.io/theta-client-guide/react-native-theta-client-1_2/</loc>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/verify_image/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/fake-theta/overview/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://theta360developers.github.io/theta-client-guide/flutter/new-project-on-linux/</loc>
-         <lastmod>2023-04-28</lastmod>
+         <lastmod>2023-06-26</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -11,7 +11,7 @@
 <link href="../how-to-install-nodejs/" rel="next"/>
 <link href="../images/icon/favicon-16x16.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.0" name="generator"/>
-<title>React Native Install - theta-client guide</title>
+<title>Installation and Setup - theta-client guide</title>
 <link href="../assets/stylesheets/main.402914a4.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -62,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              React Native Install
+              Installation and Setup
             
           </span>
 </div>
@@ -196,11 +196,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          React Native Install
+          Installation and Setup
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        React Native Install
+        Installation and Setup
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -283,6 +283,20 @@
     Sixth Command - run bash ./mkpackage.sh
   </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#to-fix-the-mkpackage-error">
+    To fix the mkpackage error
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-and-run-yarn">
+    Install and Run Yarn
+  </a>
+<nav aria-label="Install and Run Yarn" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#seventh-command-run-yarn-install">
     Seventh command - run yarn install
@@ -312,6 +326,11 @@
 <li class="md-nav__item">
 <a class="md-nav__link" href="../how-to-setup-android-emulator/">
         How to Install Android Emulator
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../react-native-theta-client-1_2/">
+        React Native Theta Client v1.2
       </a>
 </li>
 </ul>
@@ -426,6 +445,20 @@
     Sixth Command - run bash ./mkpackage.sh
   </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#to-fix-the-mkpackage-error">
+    To fix the mkpackage error
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#install-and-run-yarn">
+    Install and Run Yarn
+  </a>
+<nav aria-label="Install and Run Yarn" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#seventh-command-run-yarn-install">
     Seventh command - run yarn install
@@ -504,9 +537,7 @@ Another section will cover the installation for macOS.</p>
 </tr>
 </tbody>
 </table>
-<ul>
-<li>THETA X running firmware 1.41.0</li>
-</ul>
+<p>RICOH THETA X running firmware 2.00.0</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
 <li>
@@ -517,10 +548,7 @@ Another section will cover the installation for macOS.</p>
 <p><a href="https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html">Java 11</a></p>
 </li>
 <li>
-<p><a href="https://github.com/coreybutler/nvm-windows">Node JS</a></p>
-</li>
-<li>
-<p>Recommend to Install with NVM for Windows. Process is shown in the <a href="../how-to-install-nodejs/">Node JS Section</a>.</p>
+<p><a href="https://github.com/coreybutler/nvm-windows">Node JS</a> recommend to Install with NVM for Windows. Process is shown in the <a href="../how-to-install-nodejs/">Node JS Section</a>.</p>
 </li>
 </ul>
 <h2 id="command-line-steps">Command Line Steps</h2>
@@ -573,7 +601,7 @@ Another section will cover the installation for macOS.</p>
 <h3 id="sixth-command-run-bash-mkpackagesh">Sixth Command - run <code>bash ./mkpackage.sh</code></h3>
 <p>and as it appears we have errors to fix</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../images/react_native/windows/bashcommand.png"><img alt="bashCommand" src="../images/react_native/windows/bashcommand.png"/></a></p>
-<p>To fix the mkpackage error:</p>
+<h2 id="to-fix-the-mkpackage-error">To fix the mkpackage error</h2>
 <p>You need to Convert your file to Unix format. This is one way to do it and there may be other ways.</p>
 <ol>
 <li>
@@ -597,6 +625,7 @@ Another section will cover the installation for macOS.</p>
 cd demo-react-native
 </code></pre></div>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../images/react_native/windows/goIntodemo.png"><img alt="cdIntoDemo" src="../images/react_native/windows/goIntodemo.png"/></a></p>
+<h2 id="install-and-run-yarn">Install and Run Yarn</h2>
 <h3 id="seventh-command-run-yarn-install">Seventh command - run <code>yarn install</code></h3>
 <p>Once you are in <code>theta-client\demos\demo-react-native</code> run the following command <code>yarn install</code></p>
 <p>Note 1: <strong>May need to run Powershell in administrator mode if command isn't working</strong></p>
@@ -621,6 +650,14 @@ cd demo-react-native
 <tr>
 <td>SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable</td>
 <td><a href="#steps-to-fix-for-gradle-build-failure">Fix for Gradle Build Failure</a></td>
+</tr>
+<tr>
+<td>Yarn not Working</td>
+<td><a href="#install-and-run-yarn">Install Yarn</a></td>
+</tr>
+<tr>
+<td>mkpackage.sh doesn't seem to work</td>
+<td><a href="#to-fix-the-mkpackage-error">CRLF to LF</a></td>
 </tr>
 </tbody>
 </table>
