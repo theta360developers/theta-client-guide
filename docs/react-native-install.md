@@ -40,7 +40,7 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 | RAM         | 16.0 GB |
 | OS          | Windows 11 Home |
 
-* THETA X running firmware 1.41.0
+RICOH THETA X running firmware 2.00.0
 
 ## Requirements
 
@@ -50,9 +50,7 @@ The results will be shown using the **THETA X** running the `demo-react-native` 
 
 * [Java 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
 
-* [Node JS](https://github.com/coreybutler/nvm-windows)
-
-  * Recommend to Install with NVM for Windows. Process is shown in the [Node JS Section](how-to-install-nodejs.md).
+* [Node JS](https://github.com/coreybutler/nvm-windows) recommend to Install with NVM for Windows. Process is shown in the [Node JS Section](how-to-install-nodejs.md).
 
 ## Command Line Steps
 
@@ -133,7 +131,7 @@ and as it appears we have errors to fix
 
 ![bashCommand](images/react_native/windows/bashcommand.png)
 
-To fix the mkpackage error:
+## To fix the mkpackage error
 
 You need to Convert your file to Unix format. This is one way to do it and there may be other ways.
 
@@ -157,6 +155,8 @@ Go into the `demo-react-native` folder as shown below from the root directory `t
     cd demo-react-native
 
 ![cdIntoDemo](images/react_native/windows/goIntodemo.png)
+
+## Install and Run Yarn
 
 ### Seventh command - run `yarn install`
 
@@ -186,4 +186,6 @@ Now that we've sucesfully installed the required tools and setup. In the directo
 
  Error | Solution                              |
 | ----------- | ------------------------------------ |
-| SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable         | [Fix for Gradle Build Failure](#steps-to-fix-for-gradle-build-failure)  |
+| SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable | [Fix for Gradle Build Failure](#steps-to-fix-for-gradle-build-failure)  |
+| Yarn not Working | [Install Yarn](#install-and-run-yarn) |
+| mkpackage.sh doesn't seem to work | [CRLF to LF](#to-fix-the-mkpackage-error) |
