@@ -131,7 +131,7 @@ and as it appears we have errors to fix
 
 ![bashCommand](images/react_native/windows/bashcommand.png)
 
-To fix the mkpackage error:
+## To fix the mkpackage error
 
 You need to Convert your file to Unix format. This is one way to do it and there may be other ways.
 
@@ -155,6 +155,8 @@ Go into the `demo-react-native` folder as shown below from the root directory `t
     cd demo-react-native
 
 ![cdIntoDemo](images/react_native/windows/goIntodemo.png)
+
+## Install and Run Yarn
 
 ### Seventh command - run `yarn install`
 
@@ -184,4 +186,6 @@ Now that we've sucesfully installed the required tools and setup. In the directo
 
  Error | Solution                              |
 | ----------- | ------------------------------------ |
-| SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable         | [Fix for Gradle Build Failure](#steps-to-fix-for-gradle-build-failure)  |
+| SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable | [Fix for Gradle Build Failure](#steps-to-fix-for-gradle-build-failure)  |
+| Yarn not Working | [Install Yarn](#install-and-run-yarn) |
+| mkpackage.sh doesn't seem to work | [CRLF to LF](#to-fix-the-mkpackage-error) |
