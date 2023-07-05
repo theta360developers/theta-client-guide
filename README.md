@@ -15,6 +15,7 @@ Python 3.10.6
 pip install mkdocs
 pip install mkdocs-material
 pip install pillow cairosvg
+pip install mkdocs-glightbox
 ```
 
 ## references
