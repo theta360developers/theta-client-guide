@@ -258,6 +258,8 @@ const MainMenu = ({navigation}) => {
 export default MainMenu;
 ```
 
+[Get Options Code on Github](https://github.com/AirTechWick/theta-client-1_2/tree/main/demos/demo-react-native/src)
+
 ## Test out your Button
 
 | Button for Get Options | Get Options Result |
