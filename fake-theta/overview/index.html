@@ -8,9 +8,10 @@
 <meta content="RICOH THETA Web API and mobile development" name="description"/>
 <link href="https://theta360developers.github.io/theta-client-guide/fake-theta/overview/" rel="canonical"/>
 <link href="../../verify_image/" rel="prev"/>
+<link href="../using-fake-theta/" rel="next"/>
 <link href="../../images/icon/favicon-16x16.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-9.1.0" name="generator"/>
-<title>THETA Simulator - theta-client guide</title>
+<title>Overview - theta-client guide</title>
 <link href="../../assets/stylesheets/main.402914a4.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -61,7 +62,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              THETA Simulator
+              Overview
             
           </span>
 </div>
@@ -209,7 +210,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../../react-native-theta-client-1_2/">
-        React Native Theta Client v1.2
+        RICOH THETA Client v1.2 Walkthrough
       </a>
 </li>
 </ul>
@@ -230,14 +231,26 @@
         Verify Images
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           THETA Simulator
           <span class="md-nav__icon md-icon"></span>
 </label>
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
+          THETA Simulator
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+</label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        THETA Simulator
+        Overview
       </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -274,38 +287,18 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sample-media">
-    Sample Media
-  </a>
-<nav aria-label="Sample Media" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#request-listfiles-example">
-    Request listFiles example
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output-of-listfiles">
-    Example output of listFiles
-  </a>
-</li>
 </ul>
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#using-theta-client-with-fake-theta">
-    Using theta-client with fake-theta
-  </a>
-<nav aria-label="Using theta-client with fake-theta" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#compatibility-between-theta-client-and-fake-theta">
-    Compatibility between theta-client and fake-theta
-  </a>
+<a class="md-nav__link" href="../using-fake-theta/">
+        Using fake-theta
+      </a>
 </li>
-</ul>
-</nav>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../fake-theta-react/">
+        React Native
+      </a>
 </li>
 </ul>
 </nav>
@@ -353,39 +346,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#sample-media">
-    Sample Media
-  </a>
-<nav aria-label="Sample Media" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#request-listfiles-example">
-    Request listFiles example
-  </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#example-output-of-listfiles">
-    Example output of listFiles
-  </a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#using-theta-client-with-fake-theta">
-    Using theta-client with fake-theta
-  </a>
-<nav aria-label="Using theta-client with fake-theta" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#compatibility-between-theta-client-and-fake-theta">
-    Compatibility between theta-client and fake-theta
-  </a>
-</li>
-</ul>
-</nav>
-</li>
 </ul>
 </nav>
 </div>
@@ -423,127 +383,6 @@ to the header.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a>curl -H "emulating-theta-model:z1" https://fake-theta.vercel.app/osc/info
 </span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a>{"api":["/osc/info","/osc/state","/osc/checkForUpdates","/osc/commands/execute","/osc/commands/status"],"apiLevel":[2],"_bluetoothMacAddress":"00:45:de:78:3e:33","endpoints":{"httpPort":80,"httpUpdatesPort":80},"firmwareVersion":"2.20.3","gps":false,"gyro":true,"manufacturer":"RICOH","model":"RICOH THETA Z1","serialNumber":"10100001","supportUrl":"https://theta360.com/en/support/","uptime":67,"_wlanMacAddress":"00:45:78:bc:45:67"}
 </span></code></pre></div>
-<h2 id="sample-media">Sample Media</h2>
-<p>Oppkey manages a separate community API server with sample media
-from the RICOH THETA X. The physical device RICOH THETA has a HTTP server
-inside the camera that provides a GET API endpoint for videos and images.</p>
-<p>To simulate working with images, the Oppkey server provides links
-to actual images from the RICOH THETA X. This only works when the camera
-model is <em>x</em>, the default model.</p>
-<p>The API endpoint for the Oppkey API simulation server is: <a href="https://fake-theta-alpha.vercel.app">https://fake-theta-alpha.vercel.app</a></p>
-<p><code>camera.listFiles</code> and <code>state</code> are modified to show RICOH THETA X sample images. File name are R0010001 through R0010015.</p>
-<h3 id="request-listfiles-example">Request listFiles example</h3>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">{</span>
-</span><span id="__span-5-2"><a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"camera.listFiles"</span><span class="p">,</span><span class="w"> </span>
-</span><span id="__span-5-3"><a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="s2">"parameters"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-5-4"><a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="s2">"fileType"</span><span class="o">:</span><span class="w"> </span><span class="s2">"image"</span><span class="p">,</span>
-</span><span id="__span-5-5"><a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="s2">"entryCount"</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
-</span><span id="__span-5-6"><a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="s2">"maxThumbSize"</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
-</span><span id="__span-5-7"><a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-5-8"><a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
-</span></code></pre></div>
-<h3 id="example-output-of-listfiles">Example output of listFiles</h3>
-<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="p">{</span>
-</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="s2">"results"</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="s2">"entries"</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">      </span><span class="s2">"dateTime"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2015:07:10 11:05:18"</span><span class="p">,</span>
-</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">      </span><span class="s2">"_favorite"</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">      </span><span class="s2">"fileUrl"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://codetricity.github.io/fake-storage/files/100RICOH/R0010001.JPG"</span><span class="p">,</span>
-</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">      </span><span class="s2">"isProcessed"</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">      </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"R0010001.JPG"</span><span class="p">,</span>
-</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">      </span><span class="s2">"previewUrl"</span><span class="o">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-</span><span id="__span-6-11"><a href="#__codelineno-6-11" id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">      </span><span class="s2">"size"</span><span class="o">:</span><span class="w"> </span><span class="mf">4051440</span>
-</span><span id="__span-6-12"><a href="#__codelineno-6-12" id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-6-13"><a href="#__codelineno-6-13" id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="p">{</span>
-</span><span id="__span-6-14"><a href="#__codelineno-6-14" id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">      </span><span class="s2">"dateTime"</span><span class="o">:</span><span class="w"> </span><span class="s2">"2015:07:10 11:05:18"</span><span class="p">,</span>
-</span><span id="__span-6-15"><a href="#__codelineno-6-15" id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">      </span><span class="s2">"_favorite"</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-</span><span id="__span-6-16"><a href="#__codelineno-6-16" id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">      </span><span class="s2">"fileUrl"</span><span class="o">:</span><span class="w"> </span><span class="s2">"https://codetricity.github.io/fake-storage/files/100RICOH/R0010002.JPG"</span><span class="p">,</span>
-</span><span id="__span-6-17"><a href="#__codelineno-6-17" id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">      </span><span class="s2">"isProcessed"</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-6-18"><a href="#__codelineno-6-18" id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">      </span><span class="s2">"name"</span><span class="o">:</span><span class="w"> </span><span class="s2">"R0010002.JPG"</span><span class="p">,</span>
-</span><span id="__span-6-19"><a href="#__codelineno-6-19" id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">      </span><span class="s2">"previewUrl"</span><span class="o">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-</span><span id="__span-6-20"><a href="#__codelineno-6-20" id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">      </span><span class="s2">"size"</span><span class="o">:</span><span class="w"> </span><span class="mf">4051440</span>
-</span><span id="__span-6-21"><a href="#__codelineno-6-21" id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">    </span><span class="p">},</span>
-</span><span id="__span-6-22"><a href="#__codelineno-6-22" id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="p">...</span>
-</span></code></pre></div>
-<p>If you use an API tester such as Insomnia or Postman, you can easily
-click on the URL to see the files.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/fake_theta/fake-server-list-files.png"><img alt="fake-theta list files" src="../../images/fake_theta/fake-server-list-files.png"/></a></p>
-<p>The images are approximately 11MB.  There are no thumbnails.</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/fake_theta/show_image.png"><img alt="show image" src="../../images/fake_theta/show_image.png"/></a></p>
-<h2 id="using-theta-client-with-fake-theta">Using theta-client with fake-theta</h2>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/fake_theta/minimal-theta-client.png"><img alt="minimal theta-client" src="../../images/fake_theta/minimal-theta-client.png"/></a></p>
-<ol>
-<li>specify endpoint   <code>final String endpoint = 'https://fake-theta-alpha.vercel.app';</code></li>
-<li>initial <code>ThetaClientFlutter()</code> with the endpoint <code>await _thetaClient.initialize(endpoint);</code></li>
-</ol>
-<div class="language-dart highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">MiniApp</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">StatefulWidget</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="n">MiniApp</span><span class="p">({</span><span class="n">Key</span><span class="o">?</span><span class="w"> </span><span class="n">key</span><span class="p">})</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">super</span><span class="p">(</span><span class="nl">key:</span><span class="w"> </span><span class="n">key</span><span class="p">);</span>
-</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a>
-</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="nd">@override</span>
-</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="n">State</span><span class="o">&lt;</span><span class="n">MiniApp</span><span class="o">&gt;</span><span class="w"> </span><span class="n">createState</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">_MiniAppState</span><span class="p">();</span>
-</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span>
-</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a>
-</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="kd">class</span><span class="w"> </span><span class="nc">_MiniAppState</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">State</span><span class="o">&lt;</span><span class="n">MiniApp</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="n">_thetaClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ThetaClientFlutter</span><span class="p">();</span>
-</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">  </span><span class="kt">String</span><span class="w"> </span><span class="n">_mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'device unknown'</span><span class="p">;</span>
-</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">  </span><span class="kt">String</span><span class="w"> </span><span class="n">_cameraInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'unable to get camera info'</span><span class="p">;</span>
-</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">  </span><span class="c1">// real camera</span>
-</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">  </span><span class="c1">// final String endpoint = 'http://192.168.1.1:80/';</span>
-</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">  </span><span class="c1">// Oppkey fake camera</span>
-</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">  </span><span class="kd">final</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="n">endpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'https://fake-theta-alpha.vercel.app'</span><span class="p">;</span>
-</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a>
-</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">  </span><span class="nd">@override</span>
-</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">initState</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="k">super</span><span class="p">.</span><span class="n">initState</span><span class="p">();</span>
-</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="n">_initializeTheta</span><span class="p">();</span>
-</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a>
-</span><span id="__span-7-23"><a href="#__codelineno-7-23" id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">_initializeTheta</span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-24"><a href="#__codelineno-7-24" id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-7-25"><a href="#__codelineno-7-25" id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">mobilePlatform</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getPlatformVersion</span><span class="p">();</span>
-</span><span id="__span-7-26"><a href="#__codelineno-7-26" id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="w">      </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">initialize</span><span class="p">(</span><span class="n">endpoint</span><span class="p">);</span>
-</span><span id="__span-7-27"><a href="#__codelineno-7-27" id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="w">      </span><span class="kd">var</span><span class="w"> </span><span class="n">thetaInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">_thetaClient</span><span class="p">.</span><span class="n">getThetaInfo</span><span class="p">();</span>
-</span></code></pre></div>
-<h3 id="compatibility-between-theta-client-and-fake-theta">Compatibility between theta-client and fake-theta</h3>
-<p>As of April 28, 2023, there are several problems using theta-client
-and fake-theta.  As a workaround, you can use standard http commands
-and parse the response yourself.</p>
-<p>Here is an example of using the http package in Flutter.</p>
-<div class="language-dart highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">TextButton</span><span class="p">(</span>
-</span><span id="__span-8-2"><a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">  </span><span class="nl">onPressed:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="kd">async</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-3"><a href="#__codelineno-8-3" id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="c1">// var imageList =</span>
-</span><span id="__span-8-4"><a href="#__codelineno-8-4" id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="c1">//     await _thetaClient.listFiles(FileTypeEnum.image, 2);</span>
-</span><span id="__span-8-5"><a href="#__codelineno-8-5" id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Uri</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">'</span><span class="si">$</span><span class="n">endpoint</span><span class="s1">/osc/commands/execute'</span><span class="p">);</span>
-</span><span id="__span-8-6"><a href="#__codelineno-8-6" id="__codelineno-8-6" name="__codelineno-8-6"></a>
-</span><span id="__span-8-7"><a href="#__codelineno-8-7" id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">bodyMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-8"><a href="#__codelineno-8-8" id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">      </span><span class="s1">'name'</span><span class="o">:</span><span class="w"> </span><span class="s1">'camera.listFiles'</span><span class="p">,</span>
-</span><span id="__span-8-9"><a href="#__codelineno-8-9" id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">      </span><span class="s1">'parameters'</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-10"><a href="#__codelineno-8-10" id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="s1">'fileType'</span><span class="o">:</span><span class="w"> </span><span class="s1">'image'</span><span class="p">,</span>
-</span><span id="__span-8-11"><a href="#__codelineno-8-11" id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="s1">'startPosition'</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
-</span><span id="__span-8-12"><a href="#__codelineno-8-12" id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="s1">'entryCount'</span><span class="o">:</span><span class="w"> </span><span class="m">1</span><span class="p">,</span>
-</span><span id="__span-8-13"><a href="#__codelineno-8-13" id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="s1">'maxThumbSize'</span><span class="o">:</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
-</span><span id="__span-8-14"><a href="#__codelineno-8-14" id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="s1">'_detail'</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-</span><span id="__span-8-15"><a href="#__codelineno-8-15" id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">      </span><span class="p">}</span>
-</span><span id="__span-8-16"><a href="#__codelineno-8-16" id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="p">};</span>
-</span><span id="__span-8-17"><a href="#__codelineno-8-17" id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">bodyJson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonEncode</span><span class="p">(</span><span class="n">bodyMap</span><span class="p">);</span>
-</span><span id="__span-8-18"><a href="#__codelineno-8-18" id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">await</span><span class="w"> </span><span class="n">http</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span>
-</span><span id="__span-8-19"><a href="#__codelineno-8-19" id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">        </span><span class="nl">headers:</span><span class="w"> </span><span class="p">{</span><span class="s1">'Content-Type'</span><span class="o">:</span><span class="w"> </span><span class="s1">'application/json'</span><span class="p">},</span>
-</span><span id="__span-8-20"><a href="#__codelineno-8-20" id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">        </span><span class="nl">body:</span><span class="w"> </span><span class="n">bodyJson</span><span class="p">);</span>
-</span><span id="__span-8-21"><a href="#__codelineno-8-21" id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="n">imageUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">jsonDecode</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">body</span><span class="p">)[</span><span class="s1">'results'</span><span class="p">]</span>
-</span><span id="__span-8-22"><a href="#__codelineno-8-22" id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="p">[</span><span class="s1">'entries'</span><span class="p">][</span><span class="m">0</span><span class="p">][</span><span class="s1">'fileUrl'</span><span class="p">];</span>
-</span><span id="__span-8-23"><a href="#__codelineno-8-23" id="__codelineno-8-23" name="__codelineno-8-23"></a>
-</span><span id="__span-8-24"><a href="#__codelineno-8-24" id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">    </span><span class="n">setState</span><span class="p">(()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-8-25"><a href="#__codelineno-8-25" id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">      </span><span class="n">displayWidget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SingleChildScrollView</span><span class="p">(</span>
-</span><span id="__span-8-26"><a href="#__codelineno-8-26" id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="c1">// child: Text(imageUrl.toString()),</span>
-</span><span id="__span-8-27"><a href="#__codelineno-8-27" id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">        </span><span class="nl">child:</span><span class="w"> </span><span class="n">Image</span><span class="p">.</span><span class="n">network</span><span class="p">(</span><span class="n">imageUrl</span><span class="p">),</span>
-</span><span id="__span-8-28"><a href="#__codelineno-8-28" id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">      </span><span class="p">);</span>
-</span><span id="__span-8-29"><a href="#__codelineno-8-29" id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="p">});</span>
-</span><span id="__span-8-30"><a href="#__codelineno-8-30" id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">  </span><span class="p">},</span>
-</span><span id="__span-8-31"><a href="#__codelineno-8-31" id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">  </span><span class="nl">child:</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Text</span><span class="p">(</span><span class="s1">'thumbs'</span><span class="p">),</span>
-</span><span id="__span-8-32"><a href="#__codelineno-8-32" id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="p">),</span>
-</span></code></pre></div>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="100%" href="../../images/fake_theta/demo-fake-theta-image.png"><img alt="fake client image" src="../../images/fake_theta/demo-fake-theta-image.png"/></a></p>
 </article>
 </div>
 </div>
