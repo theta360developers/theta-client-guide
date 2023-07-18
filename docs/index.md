@@ -22,7 +22,7 @@ For native Android and iOS
 
 ## Overview
 
-`theta-client` is an open source library enabling rapid creation of mobile apps that control RICOH THETA cameras. The library works with Kotlin, Swift, Dart, and JavaScript.
+`theta-client` is an open source library enabling rapid creation of mobile apps that control RICOH THETA cameras. The library works with Kotlin, Swift, Dart, and JavaScript. The `theta-client` library was engineered by RICOH to help developers make stable, consistent code, and to conveniently provide access to the camera using pre-built methods on each platform.
 
 ## Demo Apps
 
@@ -37,6 +37,7 @@ Four open source demo applications are included:
 
 Refer to theta-client documentation for the development platform you are using.
 
+* [theta-client documentation](https://ricohapi.github.io/theta-client/index.html)
 * [Android](https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-android.md)
 * [iOS](https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-ios.md)
 * [React Native](https://github.com/ricohapi/theta-client/blob/main/docs/tutorial-react-native.md)
