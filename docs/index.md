@@ -6,19 +6,24 @@ Full code on  [GitHub ricohapi/theta-client](https://github.com/ricohapi/theta-c
 
 ## Quickstart
 
-For native Android and iOS
-
-1. Build `theta-client` first
-    1. `./gradlew publishToMavenLocal`
-    1. MacOS: `./gradlew podPublishXCFramework`
-2. Copy `aar` files you built in the previous step into Android project
-    1. from `./kotlin-multiplatform/build/outputs/aar`
-    1. to `demos\demo-android\app\libs`
-3. Copy `XCFramework` into iOS project
-4. In `./demo/demo-android` build Android demo
-5. In `./demo/demo-ios` build iOS demo
+For iOS, see [this video](https://youtu.be/8moKIJ7f8kQ?feature=shared).
 
 * [demo-android full build process video walkthrough](https://youtu.be/l8X6amOmHXI)
+
+For iOS
+
+```text
+cd theta-client/demos/demo-ios
+pod install
+```
+
+Open `SdkSample.xcworkspace` in Xcode.
+
+Connect computer to RICOH THETA camera.
+
+Press play inside of Xcode.
+
+For Android, open in Android Studio and press play.
 
 ## Overview
 

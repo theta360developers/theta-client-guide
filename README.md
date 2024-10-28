@@ -4,15 +4,14 @@
 
 On WSL on Windows 11
 
-python version
+Virtual environment
 
-```
-python3 --version
-Python 3.10.6
+```text
+python -m venv venv
+source venv/bin/activate
 ```
 
-```
-pip install mkdocs
+```text
 pip install mkdocs-material
 pip install pillow cairosvg
 pip install mkdocs-glightbox
